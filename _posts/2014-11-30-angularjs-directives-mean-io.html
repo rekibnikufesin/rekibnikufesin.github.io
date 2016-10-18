@@ -1,0 +1,62 @@
+---
+layout: post
+status: publish
+published: true
+title: AngularJS Directives in Mean.io
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 130
+wordpress_url: http://willbutton.co/?p=130
+date: '2014-11-30 20:20:02 -0700'
+date_gmt: '2014-12-01 03:20:02 -0700'
+---
+<p>Directives are a great feature in <a href="https:&#47;&#47;angularjs.org&#47;" target="_blank">Angular.js<&#47;a>. They can be an integral part of code reuse, readability and isolation for testing. In this post, I'll take you step-by-step through implementing an element directive on the <a href="http:&#47;&#47;mean.io&#47;#!&#47;" target="_blank">mean,io<&#47;a> stack.</p>
+<p>Directives, as you may know, are markers on a DOM element that tell AngularJS's HTML compiler to attach a specific behavior to a DOM element or even transform that element and it's children (as ripped from the <a href="https:&#47;&#47;docs.angularjs.org&#47;guide&#47;directive" target="_blank">documentation<&#47;a> itself). What does that really mean? &nbsp;Quite simply, it means write your code for "foo" once in a directive, and reuse it everywhere needed in your app by inserting <foo><&#47;foo>. If you've done any work at all with AngularJS, you're probably already familiar with directives like ng-repeat, data-ng-model, ng-file-select and more. Let's build our own directive now and take advantage of all its benefits.</p>
+<p>For our purposes, we're building an app using the mean.io stack.&nbsp;In my app, I have a custom package called "posts" that allows users of the website to submit journal entries to the website. It has a very simple interface that lists the most recent posts. The HTML looks like this:</p>
+<pre>
+<div><a href="&#47;#!&#47;posts&#47;create">Add a new post<&#47;a><&#47;div></p>
+<ul class="posts unstyled">
+<li data-ng-repeat="post in posts">
+        <span>{{post.user.name}}<&#47;span> &#47;<br />
+        <span class="comment-time-ago" time-ago from-time="{{post.created}}"><&#47;span> &#47;<br />
+        <span class="score">{{post.score}}<&#47;span></p>
+<div>
+<p>            <a data-ng-href="#!&#47;posts&#47;{{post._id}}">{{post.comment}}<&#47;a><br />
+            <span>WOD: <input type="text" ng-disabled="true" data-ng-model="post.wod" &#47;> <&#47;span><br />
+            <span>Meals: <input type="text" ng-disabled="true" data-ng-model="post.meals" &#47;><&#47;span><br />
+            <span>Stress: <input type="text" ng-disabled="true" data-ng-model="post.stress" &#47;><&#47;span><br />
+                <span data-ng-if="hasAuthorization(post)"><br />
+                    <a class="btn" href="&#47;#!&#47;posts&#47;{{post._id}}&#47;edit"><br />
+                        <i class="glyphicon glyphicon-edit"><&#47;i><br />
+                    <&#47;a><br />
+                    <a class="btn" data-ng-click="remove(post);"><br />
+                        <i class="glyphicon glyphicon-trash"><&#47;i><br />
+                    <&#47;a><br />
+                <&#47;span><br />
+        <&#47;div></p>
+<div ng-bind-html="post.content | lines" ><&#47;div></p>
+<div ng-if="post !== undefined" ng-include="'comments&#47;views&#47;index.html'" data-ng-controller="CommentsController" data-ng-init="findComments(post, 2)"&#47;>
+    <&#47;li><br />
+<&#47;ul><&#47;pre><br />
+This page is displayed on the posts&#47;list.html page, but I'd really like to have it inside my index.html page on the home page as well. It's only a little bit of code, and the temptation to copy&#47;paste it was strong, but there is no way I'm going to keep two copies of code up to date. I have used directives in the past (see my slides on creating <a href="http:&#47;&#47;www.slideshare.net&#47;willbutton56&#47;practical-mongodb" target="_blank">D3 directives<&#47;a> from my <a href="http:&#47;&#47;www.desertcodecamp.com&#47;about" target="_blank">Desert Code Camp<&#47;a> talk) and wanted to do so again for this application.</p>
+<p>The first step is to create a directives folder inside my package:<br />
+<a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2014&#47;11&#47;Screenshot-from-2014-11-30-200318.png"><img class="alignleft size-medium wp-image-131" src="{{ site.baseurl }}/images/Screenshot-from-2014-11-30-200318-252x300.png" alt="directive folder" width="252" height="300" &#47;><&#47;a></p>
+<p>&nbsp;</p>
+<p>Inside of this folder, you'll see that I've created a javascript file called "recentPosts.js". The file contains the following code:</p>
+<pre>'use strict';</p>
+<p>angular.module('mean.posts').directive('recentPosts', function(){<br />
+   return {<br />
+       restrict: 'E',<br />
+       templateUrl: 'posts&#47;views&#47;recent-posts.html'<br />
+   }<br />
+});<br />
+<&#47;pre><br />
+Pretty simple, right?<br />
+If we take the code one line at a time, we see that I created the directive by adding .directive onto the end of my angular module. I named it 'recentPosts' and added an anonymous function to handle the work (which there isn't much of!). The anonymous function returns an object with two items: 'restrict'- specifies where the directive can be used. In this case I'm creating an element, so I used the letter 'E'. Other directives can be attributes (indicated by 'A'), or a class name (indicated by 'C'). Any combination can be used, but the directive can only be used according to its restrictions. The second specified item is the templateUrl. One word of caution here: specify the Url as it will be seen from the webserver, not the actual file path. This was a bit tricky with mean.io until I figured this out. Mean.io does quite a bit of aggregation to keep your backend code organized but your website URLs clean.</p>
+<p>The final thing I did was move the original html from my posts&#47;list.html into a new file in the views folder called recent-posts.html. Once that was complete, all I needed to do to display the directive on a page is add the <recent-posts><&#47;recent-posts> tag. Note that I named the directive recentPosts, but display it as recent-posts. This is a little magic that happens in AngularJS.</p>
+<p>That's it! Now I have the list view displayed on the index page, inside the posts view, and only a single place to edit the code!</p>

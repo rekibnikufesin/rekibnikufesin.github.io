@@ -1,0 +1,40 @@
+---
+layout: post
+status: publish
+published: true
+title: Email Alerts Like A Boss
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 251
+wordpress_url: http://willbutton.co/?p=251
+date: '2015-08-09 00:03:32 -0700'
+date_gmt: '2015-08-09 07:03:32 -0700'
+---
+<p><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;08&#47;1439099479_full.jpeg" target="_blank"><img class="aligncenter" src="{{ site.baseurl }}/images/1439099479_thumb.jpeg" alt="" align="middle" &#47;><&#47;a></p>
+<p>If you&rsquo;re like me, there are some times you just.really.need.an.email.alert. I&rsquo;ve spent tons of time, and tried multiple (successful) solutions but recently I stumbled upon this one that has just triggered my happy factor.<br />
+Amazon Web Services (AWS) has a push notification service known as <a href="https:&#47;&#47;aws.amazon.com&#47;sns&#47;" target="_blank">Simple Notification Service<&#47;a> (SNS). The key word here is &ldquo;simple&rdquo;. Here&rsquo;s the scenario: I use <a href="http:&#47;&#47;www.zabbix.com&#47;" target="_blank">zabbix<&#47;a> for almost all of my monitoring needs, but have grown weary of configuring the needed notifications for alerts until I stumbled across a way to send alerts via SNS.<br />
+In summary, SNS allows you to publish a message and it is delivered to the subscribers (a.k.a.: <strong>you<&#47;strong>).</p>
+<h3>Setting up a new SNS topic:<&#47;h3><br />
+Let&rsquo;s start with some basic setup. In the AWS SNS console, let&rsquo;s create a new topic:</p>
+<p><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;08&#47;1439101014_full.png" target="_blank"><img class="aligncenter" src="{{ site.baseurl }}/images/1439101014_thumb.png" alt="" align="middle" &#47;><&#47;a></p>
+<p>No need to be fancy, &ldquo;Alerts&rdquo; will describe it just fine. Next, we want to create a subscription:</p>
+<p><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;08&#47;1439101112_full.png" target="_blank"><img class="aligncenter" src="{{ site.baseurl }}/images/1439101112_thumb.png" alt="" align="middle" &#47;><&#47;a></p>
+<p>For the protocol, choose &ldquo;Email&rdquo; and set the endpoint as the email address where you&rsquo;d like to receive your alerts. <strong>NOTE: <&#47;strong>you&rsquo;ll receive an email to confirm your subscription - be sure to follow the instructions included in the email. At this point, we now have an SNS topic that will notify the email addresses listed when messages are published to this topic.</p>
+<h3>Publishing to the topic:<&#47;h3><br />
+Now that we have our topic, we need to publish our alert messages to it. The best way to do this is with a shell script. On our server (in my case, my zabbix server) create the following shell script:</p>
+<blockquote><p>#!&#47;bin&#47;bash<br />
+aws&nbsp;sns&nbsp;publish&nbsp;--topic&nbsp;arn:aws:sns:us-east-1:351105429274:test-topic&nbsp;&mdash;message $1<&#47;blockquote><br />
+This shell script accepts a parameter that will be passed in and sent as the message, so if the script is named &ldquo;&#47;usr&#47;lib&#47;zabbix&#47;alertscripts&#47;alert.sh&rdquo; then it can be triggered by running &ldquo;&#47;usr&#47;lib&#47;zabbix&#47;alertscripts&#47;alert.sh Hi&rdquo;. The result will be receiving the message &ldquo;Hi&rdquo; via email. (This requires that the server has the aws cli tools properly configured. If they are not, check out the excellent article <a href="http:&#47;&#47;docs.aws.amazon.com&#47;cli&#47;latest&#47;userguide&#47;cli-chap-getting-started.html" target="_blank">here<&#47;a> for details).</p>
+<h3>Implementing the alert:<&#47;h3><br />
+At this point, we&rsquo;ve configured an SNS topic and created a shell script to trigger the alerts, so now it is time to connect zabbix to our alert script. Zabbix uses &ldquo;Media Types&rdquo; to configure notifications, so navigate to <em>Administration &mdash;> Media Types.<br />
+<&#47;em>Select <em>Create Media Type<&#47;em> and choose a name for you media type, and choose &ldquo;script&rdquo; as the type. Finally, choose &ldquo;alert.sh&rdquo; as the script name.</p>
+<p><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;08&#47;1439102673_full.png" target="_blank"><img class="aligncenter" src="{{ site.baseurl }}/images/1439102673_thumb.png" alt="" align="middle" &#47;><&#47;a></p>
+<p>This will configure zabbix to run the script when triggered, passing in the alert details as a parameter to the script. Finally, we need to associate this media type to an account. Navigate to <em>Users &mdash;> Admin &mdash;> Media<&#47;em>. Note that we are choosing the default Zabbix admin user here, not an individual user account. This configuration has a couple of benefits: first, we manage the individuals notified via subscriptions in SNS, not at the Zabbix level. Second, we can send alerts to email distribution groups rather than individuals who may not have Zabbix user accounts.</p>
+<p><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;08&#47;1439103151_full.png" target="_blank"><img class="aligncenter" src="{{ site.baseurl }}/images/1439103151_thumb.png" alt="" align="middle" &#47;><&#47;a></p>
+<p>Be sure to choose the appropriate warning levels for the alert. For instance, if you don&rsquo;t want to publish an SNS message for Information alerts, uncheck that box.<br />
+Click <em>Add<&#47;em> and that&rsquo;s all there is to it. From now on, any alerts generated by Zabbix will trigger the bash script listed above, which publishes a new message to our SNS topic and notifies subscribers via email. In addition to using the subscription model for notifications, this has the added benefit in that you no longer need to maintain a mail server, an open SMTP relay, or have a script that contains an email account credentials on the server.</p>

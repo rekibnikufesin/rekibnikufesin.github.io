@@ -1,0 +1,39 @@
+---
+layout: page
+status: publish
+published: true
+title: AWS Checklist
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 237
+wordpress_url: http://willbutton.co/?page_id=237
+date: '2015-08-04 21:44:58 -0700'
+date_gmt: '2015-08-05 04:44:58 -0700'
+categories: []
+tags: []
+comments: []
+---
+<p>Running your business in AWS brings a lot of benefits, but can introduce a lot of risk at the same time. Use this handy checklist to set your AWS environment up securely and efficiently, saving yourself time, money and heartbreak down the road!<&#47;p>
+<p><&#47;p>
+<ul>
+<li><span>Use a VPC - A VPC (Virtual Private Cloud) wraps all of your servers up in a secure network. This can help reduce exposure to the outside world by only allowing in traffic that you explicitly authorize<&#47;span><br><&#47;li>
+<li>Use IAM - IAM (Identity and Access Management) allows you to control each persons activity inside your AWS environment by requiring a unique username and password for access. Think of it as Active Directory for AWS.<&#47;li>
+<li>ELB All The Things - ELBs (Elastic Load Balancers) are just that: load balancers. Direct your incoming traffic to these. This allows you to swap out servers behind the scenes, add new servers for increased capacity, expand your environment across multiple availability zones, and manage SSL certs in a centralized location.<&#47;li>
+<li>Billing alerts - Expenses can get out of control quickly in AWS. Since AWS bills your credit card directly, it can lead to awkward conversations with the CFO when he&rsquo;s the first to see the bill each month.&nbsp;<&#47;li>
+<li>Automate Server Builds - Hand-crafted, artisan goods are great for bread and beer but not for servers. AWS offers OpsWorks, CloudFormation, and recently new tools like Lambda to ensure servers are built consistently, quickly, and predictably. Which tool generally doesn&rsquo;t matter, as any of them are better than none at all.<&#47;li>
+<li>Reserved Instances - think of reserved instances as the pre-paid cellphone of the Cloud. Going this route can save you as much as 30% in your operating costs and is a great value for servers that you know you will need for at least a year.<&#47;li>
+<li>Monitor everything- you get a double bang for the buck here: most often, excessive AWS charges can be traced back to under-utilized instances. Tying monitors to alerts is also a great way to know when things aren&rsquo;t humming along nicely.<&#47;li>
+<li>CloudWatch auditing - a simple checkbox enables auditing for every action in your AWS environment. &nbsp;A perfect way to uncover mystery events and unintended consequences.<&#47;li>
+<li>Tag everything - better yet: use your automation tool to tag everything. This is extremely helpful down the road when you want to analyze costs by department or application, or are just wondering why a specific server exists.<br>Recommended tags:
+<ul>
+<li>Owner - the name of the person responsible for the server<&#47;li>
+<li>Application - what service it provides<&#47;li>
+<li>Environment - dev, staging, production, etc...<&#47;li><&#47;ul><&#47;li>
+<li>RDS - Remote Database Services are a great way to automate your database platform, get easy to use point-in-time backups, automatic upgrades, and multi-availability zone support- all without a DBA.<&#47;li>
+<li>Use Multiple AZs - AZs (Availability Zones) are AWS representations of physical datacenters. By spreading your environment across multiple AZs, you are increasing your ability to survive a complete outage of one AZ without introducing significant latency between services.<&#47;li><&#47;ul>
+<p>This list isn&rsquo;t all-inclusive, but is a great starting point for those new to AWS or for those needing a quick how-to for setting up a new AWS environment.<&#47;p></p>

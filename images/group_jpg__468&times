@@ -1,0 +1,892 @@
+
+<!doctype html>
+<html itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="en-US" prefix="og: http://ogp.me/ns#">
+
+<head>
+		<meta charset="UTF-8">
+
+	<title>Page Not Found - WillButton.co</title>
+
+	
+	<!-- wp_head -->
+	<script>(function(html){ html.className = html.className.replace(/\bno-js\b/,'js'); if (html.classList) { html.classList.add( 'js' ); } else { html.className += ' js'; } })(document.documentElement);</script><style>.js.csstransitions .module.wow, .js.csstransitions .themify_builder_content > .themify_builder_row, .js.csstransitions .module_row, .js.csstransitions .builder-posts-wrap > .post.wow, .js.csstransitions .fly-in > .post, .js.csstransitions .fly-in .row_inner > .tb-column, .js.csstransitions .fade-in > .post, .js.csstransitions .fade-in .row_inner > .tb-column, .js.csstransitions .slide-up > .post, .js.csstransitions .slide-up .row_inner > .tb-column { visibility:hidden; }</style>
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="Page Not Found - WillButton.co" />
+<meta property="og:site_name" content="WillButton.co" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Page Not Found - WillButton.co"/>
+<meta name="twitter:site" content="@wfbutton"/>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="WillButton.co &raquo; Feed" href="http://willbutton.co/feed/" />
+<link rel="alternate" type="application/rss+xml" title="WillButton.co &raquo; Comments Feed" href="http://willbutton.co/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/willbutton.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='flick-css'  href='http://willbutton.co/wp-content/plugins/mailchimp//css/flick/flick.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimpSF_main_css-css'  href='http://willbutton.co/?mcsf_action=main_css&#038;ver=4.4.2' type='text/css' media='all' />
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://willbutton.co/wp-content/plugins/mailchimp/css/ie.css?ver=4.4.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='themify-builder-style-css'  href='http://willbutton.co/wp-content/themes/themify-landing/themify/themify-builder/css/themify-builder-style.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='ssbaFont-css'  href='//fonts.googleapis.com/css?family=Indie+Flower&#038;ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-framework-css'  href='http://willbutton.co/wp-content/themes/themify-landing/themify/css/themify.framework.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-animate-css'  href='http://willbutton.co/wp-content/themes/themify-landing/themify/themify-builder/css/animate.min.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=Oswald%3A400%2C700%7CCrimson+Text%3A700italic%2C400%2C700%2C400italic&#038;subset=latin%2Clatin-ext&#038;ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-icons-css'  href='http://willbutton.co/wp-content/themes/themify-landing/themify/themify-icons/themify-icons.css?ver=1.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css'  href='http://willbutton.co/wp-content/themes/themify-landing/style.css?ver=1.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-media-queries-css'  href='http://willbutton.co/wp-content/themes/themify-landing/media-queries.css?ver=1.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-css'  href='http://willbutton.co/wp-content/themes/themify-landing/themify/css/lightbox.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-skin-css'  href='http://willbutton.co/wp-content/themes/themify-landing/skins/blue/style.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-icon-font-css'  href='http://willbutton.co/wp-content/themes/themify-landing/themify/fontawesome/css/font-awesome.min.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-customize-css'  href='http://willbutton.co/wp-content/uploads/themify-customizer.css?ver=15.11.09.20.08.42' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-44035203-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview','/404.html?page=' + document.location.pathname + document.location.search + '&from=' + document.referrer);
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='http://willbutton.co/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/willbutton.co\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/plugins/mailchimp//js/datepicker.js?ver=4.4.2'></script>
+<link rel='https://api.w.org/' href='http://willbutton.co/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://willbutton.co/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://willbutton.co/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.2" />
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+			});
+			d = new Date();
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+
+			});
+
+		});
+	</script>
+	<style type="text/css">	.ssba {
+									
+									
+									
+									
+								}
+								.ssba img
+								{
+									width: 35px !important;
+									padding: 6px;
+									border:  0;
+									box-shadow: none !important;
+									display: inline !important;
+									vertical-align: middle;
+								}
+								.ssba, .ssba a
+								{
+									text-decoration:none;
+									border:0;
+									background: none;
+									font-family: Indie Flower;
+									font-size: 	20px;
+									
+									
+								}</style><script data-cfasync="false" src="//load.sumome.com/" data-sumo-site-id="c8dd7117eb008be131422f147703de1c02d7f40a23203564d888afae44190c7c" async></script>
+
+<!-- modules styling -->
+<style type='text/css'>
+body {
+background-image: none;
+background-color: #e3e0e0;
+}
+
+</style>
+
+<link href="http://willbutton.co/wp-content/uploads/2015/08/wb_initials2.png" rel="shortcut icon" /> 
+
+
+
+	<!-- media-queries.js -->
+	<!--[if lt IE 9]>
+		<script src="http://willbutton.co/wp-content/themes/themify-landing/js/respond.js"></script>
+	<![endif]-->
+	
+	<!-- html5.js -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+
+	<!--[if lt IE 9]>
+	<script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script> 
+	<![endif]-->
+	
+<script>			function isSupportTransition() {
+				var b = document.body || document.documentElement,
+					s = b.style,
+					p = 'transition';
+
+				if (typeof s[p] == 'string') { return true; }
+
+				// Tests for vendor specific prop
+				var v = ['Moz', 'webkit', 'Webkit', 'Khtml', 'O', 'ms'];
+				p = p.charAt(0).toUpperCase() + p.substr(1);
+
+				for (var i=0; i<v.length; i++) {
+					if (typeof s[v[i] + p] == 'string') { return true; }
+				}
+				return false;
+			}
+			if ( isSupportTransition() ) {
+				document.documentElement.className += " csstransitions";	
+			}
+			</script>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+</head>
+
+<body class="error404 skin-blue not-ie sidebar-none no-home no-touch header-horizontal">
+
+
+<div id="pagewrap" class="hfeed site">
+
+			<div id="headerwrap">
+
+			
+			<header id="header" class="pagewidth clearfix">
+
+	            
+	            					<div id="site-logo"><a href="http://willbutton.co" title="WillButton.co"><span>WillButton.co</span></a></div>				
+									<div id="site-description" class="site-description"><span>DevOps. Done for you.</span></div>				
+									<a id="menu-icon" href="#mobile-menu"></a>
+					<div id="mobile-menu" class="sidemenu sidemenu-off">
+					
+													<div id="searchform-wrap">
+								<form method="get" id="searchform" action="http://willbutton.co/">
+
+	<i class="icon-search"></i>
+
+	<input type="text" name="s" id="s" />
+
+</form>							</div>
+							<!-- /searchform-wrap -->
+						
+													<div class="social-widget">
+								<div id="themify-social-links-2" class="widget themify-social-links"><ul class="social-links horizontal">
+							<li class="social-link-item twitter image-icon icon-medium">
+								<a href="https://twitter.com/wfbutton" title="Twitter" > <img src="http://two4seven.me/wp-content/themes/postline/themify/img/social/twitter.png" /> </a>
+							</li>
+							<!-- /themify-link-item -->
+							<li class="social-link-item facebook image-icon icon-medium">
+								<a href="https://www.facebook.com/will.button.56" title="Facebook" > <img src="http://two4seven.me/wp-content/themes/postline/themify/img/social/facebook.png" /> </a>
+							</li>
+							<!-- /themify-link-item -->
+							<li class="social-link-item google image-icon icon-medium">
+								<a href="https://plus.google.com/u/0/112939709876252034429/posts" title="Google+" > <img src="http://two4seven.me/wp-content/themes/postline/themify/img/social/google-plus.png" /> </a>
+							</li>
+							<!-- /themify-link-item --></ul></div>
+																	<div class="rss">
+										<a href="http://willbutton.co/feed/"></a>
+									</div>
+															</div>
+							<!-- /.social-widget -->
+						
+													<ul id="main-nav" class="main-nav"><li id="menu-item-4341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4341"><a href="http://willbutton.co/">Home</a></li>
+<li id="menu-item-4342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4342"><a href="http://willbutton.co/about/">About</a></li>
+</ul>							<!-- /#main-nav -->
+						
+						<a id="menu-icon-close" href="#"></a>
+					</div>
+					<!-- /#mobile-menu -->
+				
+				
+			</header>
+			<!-- /#header -->
+
+	        
+		</div>
+		<!-- /#headerwrap -->
+	
+	<div id="body" class="clearfix">
+
+		
+
+<!-- layout-container -->
+<div id="layout" class="pagewidth clearfix">	
+
+		<!-- content -->
+	<div id="content" class="clearfix">
+    		
+					<h1 class="page-title" itemprop="name">404</h1>
+			<p>Page not found.</p>	
+		
+							<div id="page-4370" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">Testing Puppet Variables</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p>I&#8217;m sure this exists somewhere, but I&#8217;m adding it here because it caused me grief recently. In some puppet modules, you have variables that affect the actions taken by the module. For example: I recently created a logstash module. In the module, I support a plugin for rsync which listens on port 514, a protected port.</p>
+<p>I had two options to deal with it:</p>
+<ul>
+<li>Bind logstash to a higher port and forward it to port 514 using iptables</li>
+<li>Grant java permission to bind to port 514 using setcap</li>
+</ul>
+<p>I chose the second.</p>
+<p>In doing so, I need to grant permissions via setcap to the java process- but which java? I needed to support multiple versions. I created a custom fact to get the version of java on the system:</p>
+<blockquote><p># hardware_platform.rb</p>
+<p>Facter.add(&#8216;logstash_java_version&#8217;) do<br />
+setcode do<br />
+ver = Facter::Core::Execution.exec(&#8216;java -version 2&gt;&amp;1 | head -n1&#8217;)<br />
+if ver =~ /1\.8/<br />
+&#8216;1.8&#8217;<br />
+elsif ver =~ /1\.7/<br />
+&#8216;1.7&#8217;<br />
+else<br />
+&#8216;unknown&#8217;<br />
+end<br />
+end<br />
+end</p></blockquote>
+<p>This resulted in a fact named &#8216;logstash_java_version&#8217; with a value of 1.8, 1.7 or unknown (java 8 and 7 are the only ones I want to support at the time of this writing).</p>
+<p>Now in my logstash manifest, I create a custom variable to get the path to the java executable. I do this because setcap needs the exact path to work.</p>
+<blockquote><p>case $::logstash_java_version {<br />
+&#8216;1.7&#8217;: {<br />
+# path to java<br />
+$path = &#8216;/usr/lib/jvm/jdk-7-oracle-x64/jre/bin/java&#8217;<br />
+}<br />
+&#8216;1.8&#8217;: {<br />
+# path to java8<br />
+$path = &#8216;/usr/lib/jvm/jdk-8-oracle-x64/jre/bin/java&#8217;<br />
+}<br />
+default: {<br />
+fail(&#8220;Unsupported version of Java on ${module_name}&#8221;)<br />
+}<br />
+}</p></blockquote>
+<p>Finally, this allows me to create a single exec resource that will work with either of the supported java versions:</p>
+<blockquote><p>exec {&#8216;setcap&#8217;:<br />
+command =&gt; &#8220;setcap -v &#8216;cap_net_bind_service=+ep&#8217; ${path}&#8221;,<br />
+unless =&gt; &#8220;sudo getcap -v ${path} | grep cap_net_bind_service+ep&#8221;,<br />
+require =&gt; Package[&#8216;logstash&#8217;],<br />
+}</p></blockquote>
+<p>Boom!<br />
+Except&#8230; No tests for this, and untested code is unusable code. So how can we test this? Especially given that we have a variable that can drive the outcome of our manifest.</p>
+<p>My tests look like this. Starting with Java 7:</p>
+<blockquote><p>context &#8216;with java 7&#8217; do<br />
+let (:facts) {{ :memorysize_mb =&gt; &#8216;4&#8217;, :logstash_java_version =&gt; &#8216;1.7&#8217; }}<br />
+it &#8216;should have the path to java&#8217; do<br />
+should contain_exec(&#8216;setcap&#8217;).with({<br />
+&#8216;command&#8217; =&gt; &#8220;setcap -v &#8216;cap_net_bind_service=+ep&#8217; /usr/lib/jvm/jdk-7-oracle-x64/jre/bin/java&#8221;,<br />
+&#8216;unless&#8217; =&gt; &#8220;sudo getcap -v /usr/lib/jvm/jdk-7-oracle-x64/jre/bin/java | grep cap_net_bind_service+ep&#8221;<br />
+})<br />
+end<br />
+end</p></blockquote>
+<p>Java 8 looks the same, except substituting 1.8 as the value for logstash_java_version:</p>
+<blockquote><p>context &#8216;with java 8&#8217; do<br />
+let (:facts) {{ :memorysize_mb =&gt; &#8216;4&#8217;, :logstash_java_version =&gt; &#8216;1.8&#8217; }}<br />
+it &#8216;should have the path to java&#8217; do<br />
+should contain_exec(&#8216;setcap&#8217;).with({<br />
+&#8216;command&#8217; =&gt; &#8220;setcap -v &#8216;cap_net_bind_service=+ep&#8217; /usr/lib/jvm/jdk-8-oracle-x64/jre/bin/java&#8221;,<br />
+&#8216;unless&#8217; =&gt; &#8220;sudo getcap -v /usr/lib/jvm/jdk-8-oracle-x64/jre/bin/java | grep cap_net_bind_service+ep&#8221;<br />
+})<br />
+end<br />
+end</p></blockquote>
+<p>And we can test for an unsupported version of Java too:</p>
+<blockquote><p>context &#8216;with an unknown java version&#8217; do<br />
+let (:facts) {{ :memorysize_mb =&gt; &#8216;4&#8217;, :logstash_java_version =&gt; &#8216;0&#8217; }}<br />
+it &#8216;should fail&#8217; do<br />
+expect{<br />
+should contain_class(&#8216;logstash&#8217;)<br />
+}.to raise_error(Puppet::Error, /Unsupported version/)<br />
+end<br />
+end</p></blockquote>
+<p>Aw snap! How &#8217;bout that?!?! Custom facts, testing variables, and validating the operation of our module!</p>
+<div id="themify_builder_content-4370" data-postid="4370" class="themify_builder_content themify_builder_content-4370 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-4363" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">Tmuxinator and the Art of Laziness</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p><img class="alignleft size-medium wp-image-4365" src="http://willbutton.co/wp-content/uploads/2016/01/laziness-300x163.jpg" alt="laziness" width="300" height="163" srcset="http://willbutton.co/wp-content/uploads/2016/01/laziness-300x163.jpg 300w, http://willbutton.co/wp-content/uploads/2016/01/laziness.jpg 700w" sizes="(max-width: 300px) 100vw, 300px" />If you&#8217;ve tried <a href="https://tmux.github.io/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tmux.github.io/', 'tmux');">tmux</a> and been frustrated, you are not alone. This post will not help with that, but it will provide more incentive to +1 your laziness skill by introducing you to <a href="https://github.com/tmuxinator/tmuxinator" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://github.com/tmuxinator/tmuxinator', 'tmuxinator');">tmuxinator</a>. I&#8217;m not going to explain what either tool is, or tell you how to install it: the respective websites for each already do that much better than I can (besides, I&#8217;m lazy and repeating information found elsewhere contradicts my inherent laziness). What you will learn is how I use tmuxinator to streamline common workflow scenarios.</p>
+<h3>Scenario 1: Quickly ssh to every server of a given type.</h3>
+<p>I manage multiple elasticsearch clusters. It&#8217;s common for one of the clusters to blow up and I need to see what is going on. In disaster scenarios, I don&#8217;t like to rely on external components such as log shipping or health checks to feed me info. I want to go to the source. I have a tmuxinator config file for each cluster so all I merely have to open iTerm and type &#8216;mux aardvark&#8217; to access every server in the aardvark cluster. The magic behind this comes from the aardvark.yml file in the .tmuxinator folder of my home directory. It looks like this:</p>
+<blockquote><p># ~/.tmuxinator/aardvark.yml</p>
+<p>name: Aardvark ES Cluster<br />
+root: ~/</p>
+<p>&nbsp;</p>
+<p>windows:<br />
+&#8211; aardvark:<br />
+layout: tiled<br />
+panes:<br />
+&#8211; ssh will.button@192.168.99.147<br />
+&#8211; ssh will.button@192.168.99.202<br />
+&#8211; ssh will.button@192.168.99.27</p></blockquote>
+<p>It&#8217;s really straightforward.<br />
+When tmuxinator fires up with the aardvark parameter, it creates a window named &#8220;aardvark&#8221;</p>
+<blockquote><p>windows:<br />
+&#8211; aardvark:</p></blockquote>
+<p>Inside that window, it uses a tiled layout.</p>
+<blockquote><p>layout: tiled</p></blockquote>
+<p>And then opens 3 ssh sessions to the 3 servers listed. It actually runs that as a command, so any command your system understands will be run in its respective pane.</p>
+<blockquote><p>panes:<br />
+&#8211; ssh will.button@192.168.99.147<br />
+&#8211; ssh will.button@192.168.99.202<br />
+&#8211; ssh will.button@192.168.99.27</p></blockquote>
+<p>Boom! One command logs me into 3 servers. That&#8217;s laziness in action!</p>
+<h3>Scenario 2: Developing puppet modules.</h3>
+<p>Developing puppet modules requires a bit more setup. I need vagrant images running for my puppetmaster and for the dev instance I&#8217;m developing for. I need to be logged into the instances, and they need to be started if they aren&#8217;t already. I also need my editor opened up so that I can edit files. All of this happens with the command &#8216;mux puppet&#8217;. Let&#8217;s see how that works:</p>
+<blockquote><p># ~/.tmuxinator/puppet.yml</p>
+<p>name: puppet<br />
+root: ~/devops/puppet</p>
+<p>windows:<br />
+&#8211; editor:<br />
+vim<br />
+&#8211; vagrant:<br />
+layout: main-vertical<br />
+panes:<br />
+&#8211; puppetmaster:<br />
+&#8211; cd ~/vagrant/puppetmaster<br />
+&#8211; vagrant up<br />
+&#8211; vagrant ssh<br />
+&#8211; sudo su<br />
+&#8211; cd /var/lib/hiera<br />
+&#8211; agent:<br />
+&#8211; cd ~/vagrant/debian8<br />
+&#8211; vagrant up<br />
+&#8211; vagrant ssh<br />
+&#8211; sudo su</p></blockquote>
+<p>Starting at the top, the shell root is set to</p>
+<blockquote><p>~/devops/puppet</p></blockquote>
+<p>Then a window is created named &#8216;editor&#8217; and vim is launched.</p>
+<blockquote><p>  &#8211; editor:<br />
+vim</p></blockquote>
+<p>A second window named &#8216;vagrant&#8217; is created, with two panes: one for the puppetmaster and one for the agent. A series of commands is run on each that brings the instance up, logs me into it, and gains root access.</p>
+<blockquote><p>  &#8211; vagrant:<br />
+layout: main-vertical<br />
+panes:<br />
+&#8211; puppetmaster:<br />
+&#8211; cd ~/vagrant/puppetmaster<br />
+&#8211; vagrant up<br />
+&#8211; vagrant ssh<br />
+&#8211; sudo su<br />
+&#8211; cd /var/lib/hiera<br />
+&#8211; agent:<br />
+&#8211; cd ~/vagrant/debian8<br />
+&#8211; vagrant up<br />
+&#8211; vagrant ssh<br />
+&#8211; sudo su</p>
+<p>All said and done, it&#8217;s an extremely convenient way of launching my puppet environment and automating my development process. Also cool is to note that this tmuxinator config works the same whether I&#8217;ve destroyed my virtual boxes and they need to be recreated from scratch or they simply need to be powered back on.</p></blockquote>
+<div id="themify_builder_content-4363" data-postid="4363" class="themify_builder_content themify_builder_content-4363 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-4358" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">No One Cares About Lambda and the API Gateway</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p class="p1"><img class="alignleft size-medium wp-image-4359" src="http://willbutton.co/wp-content/uploads/2016/01/living_under_a_rock_-_Google_Search-300x223.png" alt="living under a rock" width="300" height="223" srcset="http://willbutton.co/wp-content/uploads/2016/01/living_under_a_rock_-_Google_Search-300x223.png 300w, http://willbutton.co/wp-content/uploads/2016/01/living_under_a_rock_-_Google_Search-768x571.png 768w, http://willbutton.co/wp-content/uploads/2016/01/living_under_a_rock_-_Google_Search-1024x761.png 1024w, http://willbutton.co/wp-content/uploads/2016/01/living_under_a_rock_-_Google_Search.png 1338w" sizes="(max-width: 300px) 100vw, 300px" />TL;DR &#8211; a 90 second video that sums up this post: <a href="http://bit.ly/23oUqbg" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://bit.ly/23oUqbg', 'http://bit.ly/23oUqbg');">http://bit.ly/23oUqbg</a></p>
+<p class="p1">Without resorting to references about living under a rock or being from the stone age, it’s a fair assumption that you’re familiar with Amazon’s AWS API Gateway and Lambda. Maybe you’ve even logged in and checked it out. At that point though, if you didn’t dedicate some serious book-learnin&#8217; time to it, you probably hit the same high learning curve that has stopped many from pursuing it further.</p>
+<p class="p1">No shit. It’s a seriously steep learning curve. Especially if you weren’t already familiar with the AWS Console. So that raises the question: why bother? You’ve already got some means of deploying your API servers and have enough “new stuff” to learn as it is (especially if you’re coding in JavaScript!). Let’s look at what we <b>don’t</b> have to do when you deploy using the API Gateway and Lambda.</p>
+<p class="p1">Patching: everyone who loves reading Release Notes, verifying dependencies and validating compatibility across versions raise your hand! Hmmm. Not a big fan, huh? Yeah, me neither.</p>
+<p class="p1">Maintenance: Routine maintenance windows with scheduled downtime or rolling updates? Yes please, I’d love <b>0</b> more of those!</p>
+<p class="p1">Hardware: BOOM! I love getting failed disk alerts at 2am and rolling my nocturnal ass down to a data center to change out a hard drive! Not.</p>
+<p class="p1">Clustering, load balancing, deployment integration, continuous deployment: all great, worthy stuff and a necessity to online business today, but if I can get out of that work???</p>
+<p class="p1"><img class="alignleft size-medium wp-image-4360" src="http://willbutton.co/wp-content/uploads/2016/01/Will_Button_on_Twitter___AWS_API_Gateway_and_Lambda__Who_cares___aws__apigateway__lambda__nodejs__javascript_https___t_co_B2IPJz3447_https___t_co_RZk9BLmkhi_-300x179.png" alt="sysadmins" width="300" height="179" srcset="http://willbutton.co/wp-content/uploads/2016/01/Will_Button_on_Twitter___AWS_API_Gateway_and_Lambda__Who_cares___aws__apigateway__lambda__nodejs__javascript_https___t_co_B2IPJz3447_https___t_co_RZk9BLmkhi_-300x179.png 300w, http://willbutton.co/wp-content/uploads/2016/01/Will_Button_on_Twitter___AWS_API_Gateway_and_Lambda__Who_cares___aws__apigateway__lambda__nodejs__javascript_https___t_co_B2IPJz3447_https___t_co_RZk9BLmkhi_-768x458.png 768w, http://willbutton.co/wp-content/uploads/2016/01/Will_Button_on_Twitter___AWS_API_Gateway_and_Lambda__Who_cares___aws__apigateway__lambda__nodejs__javascript_https___t_co_B2IPJz3447_https___t_co_RZk9BLmkhi_-1024x610.png 1024w, http://willbutton.co/wp-content/uploads/2016/01/Will_Button_on_Twitter___AWS_API_Gateway_and_Lambda__Who_cares___aws__apigateway__lambda__nodejs__javascript_https___t_co_B2IPJz3447_https___t_co_RZk9BLmkhi_-1024x610-702x418.png 702w, http://willbutton.co/wp-content/uploads/2016/01/Will_Button_on_Twitter___AWS_API_Gateway_and_Lambda__Who_cares___aws__apigateway__lambda__nodejs__javascript_https___t_co_B2IPJz3447_https___t_co_RZk9BLmkhi_.png 1544w" sizes="(max-width: 300px) 100vw, 300px" />In my opinion, that’s the real beauty of services like the API Gateway and Lambda. Your application is launched automatically on a fully patched, fault tolerant, scalable instance and no effort is required on your part to make that happen. Well, no effort aside from learning how to use the tool. That’s a fair trade. The biggest benefit of all though is that you spend more time writing the code that delivers value to your customers. Sure, all of the things I listed above are of value to your customer, but it’s not the value they want to pay you for. They want to pay you for the application logic that enables them to do that thing they do, that’s why your their guy or girl, not because you have a stack of spare hard drives next to your night stand.</p>
+<p class="p1">So yeah, I totally agree the learning curve is steep. But with a little effort on your part, it turns into faster delivery and potentially better service for your customers. When you’re ready to take on that challenge, I’ve spent a ton of time on this subject and have a couple of resources for you. If you love right-to-the-point crash course info, I’ve created some lessons on <a href="http://egghead.io" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://egghead.io', 'egghead.io');">egghead.io</a>. You can check them out here: <a href="https://bit.ly/EggheadAWS" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://bit.ly/EggheadAWS', 'http://bit.ly/EggheadAWS');">http://bit.ly/EggheadAWS</a>. If on the other hand, you like to go deep and understand what happens beneath the shiny chrome I’ve got an in-depth lesson on the AWS API Gateway on Pluralsight at <a href="http://bit.ly/1RK8iIW" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://bit.ly/1RK8iIW', 'http://bit.ly/1RK8iIW');">http://bit.ly/1RK8iIW</a>.</p>
+<div id="themify_builder_content-4358" data-postid="4358" class="themify_builder_content themify_builder_content-4358 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-4351" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">DevOps is Temporary</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p>By now, you&#8217;re hearing a theme for this DevOps thing.<a href="http://willbutton.co/wp-content/uploads/2015/12/group_jpg__468×417_.png"><img class="alignright size-medium wp-image-4352" src="http://willbutton.co/wp-content/uploads/2015/12/group_jpg__468×417_-300x266.png" alt="car_salesmen" width="300" height="266" srcset="http://willbutton.co/wp-content/uploads/2015/12/group_jpg__468×417_-300x266.png 300w, http://willbutton.co/wp-content/uploads/2015/12/group_jpg__468×417_.png 916w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Those who claim to know what it is are trying to sell you something. Those who are doing it are telling you that you shouldn&#8217;t be. It seems like a no-win situation, yet everyone is piling on the band wagon.</p>
+<p>I have a theory, but you aren&#8217;t going to like it.</p>
+<p>Hire a DevOps team, but let go of any hippie-based free love and peace relationships where your teams unite and sing Kumbaya while building the next great version of your platform. You will not be successful in creating some harmonious cult where developers, devops, and IT guys collaborate, whiteboard, and document your amazing architecture. In the off-chance that you do, it&#8217;s because you hired the wrong people and they are too polite/timid/scared to say what is really on their mind. I&#8217;m going to show you what the raw, unfiltered face of DevOps really looks like. Brace yourself.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/12/Inbox__1_307__-_will_button_traxtech_com_-_Trax_Holdings_Inc__Mail.png"><img class="aligncenter size-full wp-image-4354" src="http://willbutton.co/wp-content/uploads/2015/12/Inbox__1_307__-_will_button_traxtech_com_-_Trax_Holdings_Inc__Mail.png" alt="the_face_of_devops" width="504" height="362" srcset="http://willbutton.co/wp-content/uploads/2015/12/Inbox__1_307__-_will_button_traxtech_com_-_Trax_Holdings_Inc__Mail-300x215.png 300w, http://willbutton.co/wp-content/uploads/2015/12/Inbox__1_307__-_will_button_traxtech_com_-_Trax_Holdings_Inc__Mail.png 504w" sizes="(max-width: 504px) 100vw, 504px" /></a></p>
+<p>This is what DevOps guys do best, and it&#8217;s what your other teams expect of them even if you don&#8217;t. They see a fire. They run in. They put out the fire. It doesn&#8217;t matter what platform, OS, language, runtime, or framework is on fire- a DevOps guy will own it until the flames are out.</p>
+<p>Yeah, sure, sure- we want our dev teams to embrace CI and CD, and TDD, and every other buzzword that leads to sustainable, scalable solutions- but they won&#8217;t. At least not until they get used to the site of your DevOps guys showing them how. At some point, they&#8217;ll get tired of hearing the CTO praise the DevOps team for their efforts. They&#8217;ll want some of that spotlight, but guess what? You didn&#8217;t <em>mandate</em> it, they want it. That&#8217;s what will make it happen. Don&#8217;t fool yourself by thinking that if you just <em>hire the right DevOps team</em> they&#8217;ll impart this knowledge into your existing teams. You current teams don&#8217;t want to hear it. They already think they are doing it, and every outage you suffer is someone else&#8217;s fault.</p>
+<p>So understand this: hiring DevOps guys is a temporary solution. It&#8217;s ok. We know it. To be honest, we&#8217;d get bored of your shit and leave sooner or later anyway.</p>
+<p>Sounds like a good thing, right?</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/12/kid_rock_-_Google_Search.png"><img class="alignleft size-medium wp-image-4355" src="http://willbutton.co/wp-content/uploads/2015/12/kid_rock_-_Google_Search-300x233.png" alt="cocky" width="300" height="233" srcset="http://willbutton.co/wp-content/uploads/2015/12/kid_rock_-_Google_Search-300x233.png 300w, http://willbutton.co/wp-content/uploads/2015/12/kid_rock_-_Google_Search-702x544.png 702w, http://willbutton.co/wp-content/uploads/2015/12/kid_rock_-_Google_Search.png 952w" sizes="(max-width: 300px) 100vw, 300px" /></a>There is a downside.<br />
+DevOps guys are cocky and honestly don&#8217;t give a shit. We aren&#8217;t politically correct, HR friendly, compassionate&#8230; as a matter of fact, you should count on at least one or two of your current team coming to you in tears because of what your DevOps team said to them. But don&#8217;t let that ever, ever, <em>ever</em> be interpreted as &#8220;we don&#8217;t care&#8221;, because we do. We take great pride in our work and love the adrenaline rush of charging into a dead cluster to bring it back to life.</p>
+<p>Now&#8230; <a href="mailto:will@willbutto.co">let&#8217;s go put out some fires</a>!</p>
+<div id="themify_builder_content-4351" data-postid="4351" class="themify_builder_content themify_builder_content-4351 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-4344" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">1125cc&#8217;s of Technical Debt</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<div><a href="http://willbutton.co/wp-content/uploads/2015/11/20150627_123554.jpg"><img class="aligncenter size-large wp-image-4345" src="http://willbutton.co/wp-content/uploads/2015/11/20150627_123554-1024x576.jpg" alt="Buell 1125R" width="1024" height="576" srcset="http://willbutton.co/wp-content/uploads/2015/11/20150627_123554-300x169.jpg 300w, http://willbutton.co/wp-content/uploads/2015/11/20150627_123554-1024x576.jpg 1024w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></div>
+<div>Nothing.</div>
+<div>I click the start button again.</div>
+<div>Still nothing.</div>
+<div>Looks like I’m driving the car to work again.</div>
+<div>That was two months ago. Guess what? My bike is still broken. I really want to fix it. I enjoy doing the work, I love the freedom and zen-like experience of riding it to work, but it keeps losing priority against other tasks.</div>
+<div>In effect, my 2008 Buell 1125R is technical debt.</div>
+<div>It’s the old server at the bottom of the rack with the noisy hard drives. It’s the WordPress updates that should be installed, but you need to verify your backup first. It’s the security updates for the finance servers. It’s the breaking changes in the dependencies for those npm modules. It’s anything that needs to be done but isn’t stopping production at the moment.</div>
+<div></div>
+<div>You will never eliminate technical debt, but ignoring it completely is not the right answer. What follows are some of the best examples I’ve found in my career for managing technical debt. Read on, apply, comment with your suggestions.</div>
+<div><a href="http://willbutton.co/wp-content/uploads/2015/11/dad_jokes_-_Google_Search.png"><img class="alignleft size-medium wp-image-4346" src="http://willbutton.co/wp-content/uploads/2015/11/dad_jokes_-_Google_Search-300x228.png" alt="dad clothes" width="300" height="228" srcset="http://willbutton.co/wp-content/uploads/2015/11/dad_jokes_-_Google_Search-300x228.png 300w, http://willbutton.co/wp-content/uploads/2015/11/dad_jokes_-_Google_Search.png 958w" sizes="(max-width: 300px) 100vw, 300px" /></a>1. Spring Cleaning: Remember those days when you were a kid, waking up and stumbling down the hallway- ready for a big bowl of cereal and some Saturday morning cartoons? But then you saw your parents: dressed in their “work clothes”.</div>
+<div>They were cheerful.</div>
+<div>Sarcastically cheerful.</div>
+<div>That big grin on their faces.</div>
+<div></div>
+<div>Uh-oh.</div>
+<div></div>
+<div>No good can come from this.</div>
+<div>That’s when they would gleefully announce “it’s spring cleaning day!” and you would sacrifice an entire Saturday to cleaning stuff out of the garage. At times, you wondered where this stuff came from. Were the neighbors dropping their used stuff in your garage? Seriously.</div>
+<div>Apply the same concept to your team. Have a spring cleaning day. Most of our stuff is virtualized these days anyway, so add some excitement to it. Have your team meet on a Saturday morning at a coffee shop. Everyone has to dress in their “gotta clean the garage clothes” and you spring for the coffee and donuts. Have some fun with it, crank up the tunes and laugh about the things you find. Parade that cron job that deletes /tmp every hour around for everyone to laugh at. Make sure there isn’t blame, we’ve all done stuff we’re not proud of but had to do it to keep the wheels of progress rolling. Laugh about it, fix it, have another cup of Kona.</div>
+<div></div>
+<div><a href="http://willbutton.co/wp-content/uploads/2015/11/vocational_-_Google_Search.png"><img class="size-medium wp-image-4347 alignright" src="http://willbutton.co/wp-content/uploads/2015/11/vocational_-_Google_Search-300x176.png" alt="vocational" width="300" height="176" srcset="http://willbutton.co/wp-content/uploads/2015/11/vocational_-_Google_Search-300x176.png 300w, http://willbutton.co/wp-content/uploads/2015/11/vocational_-_Google_Search-1024x602.png 1024w, http://willbutton.co/wp-content/uploads/2015/11/vocational_-_Google_Search.png 1126w" sizes="(max-width: 300px) 100vw, 300px" /></a>2. Vocational days: Make a list of things that need to be resolved. Assign them to your junior team members. Not staffed for that? How about opening the opportunity up to some co-workers outside of your department? Like the intern in marketing? He doesn’t work on your team, but thanks to his courses in school is well-versed in the basic skills needed to lend a helping hand and the experience will serve him well in the future as he gains a deeper understanding of how all the systems interconnect. Let him stare at them awkwardly until he understands them, then guide him to the solutions. It will take some extra effort, but the issues will get resolved. Your team members will get some valuable experience as a bonus.</div>
+<div></div>
+<div><a href="http://willbutton.co/wp-content/uploads/2015/11/push_the_button_-_Google_Search.png"><img class="alignleft size-medium wp-image-4348" src="http://willbutton.co/wp-content/uploads/2015/11/push_the_button_-_Google_Search-300x208.png" alt="Push the button" width="300" height="208" srcset="http://willbutton.co/wp-content/uploads/2015/11/push_the_button_-_Google_Search-300x208.png 300w, http://willbutton.co/wp-content/uploads/2015/11/push_the_button_-_Google_Search-1024x709.png 1024w, http://willbutton.co/wp-content/uploads/2015/11/push_the_button_-_Google_Search.png 1048w" sizes="(max-width: 300px) 100vw, 300px" /></a>3. Outsource: Hire a consultant or firm that specializes in the areas you need help. Define a list of tasks and desired outcome. Be specific in the deliverables, not the steps. Not everyone solves a problem the same way, so make sure the results are clearly defined. Your goal here is to eliminate the technical debt, not micro-manage the steps in between. Let go of control and gain the results.</div>
+<div></div>
+<div>Step 3 is what I had to do with the Buell. I really wanted to work on it myself. I love getting my hands dirty and was looking forward to tearing into it to see what was going on, but it didn’t happen. At the same time, I wanted to involve my kids as well, to teach them some fundamental mechanical skills. Again, it wasn’t happening- too many other things kept getting in the way. Ultimately, I found a great mechanic with experience working on Buells. A side-bonus: he only lived a short distance away. He arrived at my house 15 minutes after talking to him and I felt a huge relief as he drove away with my bike on his trailer. I would be riding again soon, and while he was working on the bike- I could continue working on other, higher priority tasks. I’ve heard the expression “I’ll use all of the brains I have, and all the brains I can borrow” and I believe this is what it means. Let go of the control, and focus on the results.</div>
+<div></div>
+<div>What technical debt exists in your life that you’ve been avoiding? Can one of these tips help you resolve it and amplify your productivity?</div>
+<div id="themify_builder_content-4344" data-postid="4344" class="themify_builder_content themify_builder_content-4344 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-251" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">Email Alerts Like A Boss</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p><a href="http://willbutton.co/wp-content/uploads/2015/08/1439099479_full.jpeg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/08/1439099479_thumb.jpeg" alt="" align="middle" /></a></p>
+<p>If you’re like me, there are some times you just.really.need.an.email.alert. I’ve spent tons of time, and tried multiple (successful) solutions but recently I stumbled upon this one that has just triggered my happy factor.<br />
+Amazon Web Services (AWS) has a push notification service known as <a href="https://aws.amazon.com/sns/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://aws.amazon.com/sns/', 'Simple Notification Service');" target="_blank">Simple Notification Service</a> (SNS). The key word here is “simple”. Here’s the scenario: I use <a href="http://www.zabbix.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.zabbix.com/', 'zabbix');" target="_blank">zabbix</a> for almost all of my monitoring needs, but have grown weary of configuring the needed notifications for alerts until I stumbled across a way to send alerts via SNS.<br />
+In summary, SNS allows you to publish a message and it is delivered to the subscribers (a.k.a.: <strong>you</strong>).</p>
+<h3>Setting up a new SNS topic:</h3>
+<p>Let’s start with some basic setup. In the AWS SNS console, let’s create a new topic:</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/08/1439101014_full.png" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/08/1439101014_thumb.png" alt="" align="middle" /></a></p>
+<p>No need to be fancy, “Alerts” will describe it just fine. Next, we want to create a subscription:</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/08/1439101112_full.png" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/08/1439101112_thumb.png" alt="" align="middle" /></a></p>
+<p>For the protocol, choose “Email” and set the endpoint as the email address where you’d like to receive your alerts. <strong>NOTE: </strong>you’ll receive an email to confirm your subscription &#8211; be sure to follow the instructions included in the email. At this point, we now have an SNS topic that will notify the email addresses listed when messages are published to this topic.</p>
+<h3>Publishing to the topic:</h3>
+<p>Now that we have our topic, we need to publish our alert messages to it. The best way to do this is with a shell script. On our server (in my case, my zabbix server) create the following shell script:</p>
+<blockquote><p>#!/bin/bash<br />
+aws sns publish &#8211;topic arn:aws:sns:us-east-1:351105429274:test-topic —message $1</p></blockquote>
+<p>This shell script accepts a parameter that will be passed in and sent as the message, so if the script is named “/usr/lib/zabbix/alertscripts/alert.sh” then it can be triggered by running “/usr/lib/zabbix/alertscripts/alert.sh Hi”. The result will be receiving the message “Hi” via email. (This requires that the server has the aws cli tools properly configured. If they are not, check out the excellent article <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html', 'here');" target="_blank">here</a> for details).</p>
+<h3>Implementing the alert:</h3>
+<p>At this point, we’ve configured an SNS topic and created a shell script to trigger the alerts, so now it is time to connect zabbix to our alert script. Zabbix uses “Media Types” to configure notifications, so navigate to <em>Administration —&gt; Media Types.<br />
+</em>Select <em>Create Media Type</em> and choose a name for you media type, and choose “script” as the type. Finally, choose “alert.sh” as the script name.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/08/1439102673_full.png" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/08/1439102673_thumb.png" alt="" align="middle" /></a></p>
+<p>This will configure zabbix to run the script when triggered, passing in the alert details as a parameter to the script. Finally, we need to associate this media type to an account. Navigate to <em>Users —&gt; Admin —&gt; Media</em>. Note that we are choosing the default Zabbix admin user here, not an individual user account. This configuration has a couple of benefits: first, we manage the individuals notified via subscriptions in SNS, not at the Zabbix level. Second, we can send alerts to email distribution groups rather than individuals who may not have Zabbix user accounts.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/08/1439103151_full.png" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/08/1439103151_thumb.png" alt="" align="middle" /></a></p>
+<p>Be sure to choose the appropriate warning levels for the alert. For instance, if you don’t want to publish an SNS message for Information alerts, uncheck that box.<br />
+Click <em>Add</em> and that’s all there is to it. From now on, any alerts generated by Zabbix will trigger the bash script listed above, which publishes a new message to our SNS topic and notifies subscribers via email. In addition to using the subscription model for notifications, this has the added benefit in that you no longer need to maintain a mail server, an open SMTP relay, or have a script that contains an email account credentials on the server.</p>
+<div id="themify_builder_content-251" data-postid="251" class="themify_builder_content themify_builder_content-251 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-231" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">Collateral damage from firefighting</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p><a href="file:///Users/willbutton/Library/Containers/com.blogo.Blogo/Data/Library/Caches/com.blogo.Blogo/DOD_mobile_aircraft_firefighting_training_device.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/07/1437936431_thumb.jpeg" alt="" align="middle" /></a></p>
+<p>I’ve spent a lot of time over the last 6 months in and out of <a href="https://www.elastic.co/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.elastic.co/', 'elasticsearch');" target="_blank">elasticsearch</a>, sometimes more than I’d like. Just today, I received a disk space alert on one of the data nodes. Upon logging in, a disk space check confirmed it:</p>
+<blockquote><p>Filesystem Size Used Avail Use% Mounted on<br />
+rootfs 20G 16G 3.7G 81% /<br />
+udev 10M 0 10M 0% /dev<br />
+tmpfs 1.5G 148K 1.5G 1% /run<br />
+/dev/xvda1 20G 16G 3.7G 81% /<br />
+tmpfs 5.0M 0 5.0M 0% /run/lock<br />
+tmpfs 3.0G 0 3.0G 0% /run/shm<br />
+/dev/md0 985G 114G 822G 13% /mnt/es</p></blockquote>
+<p>but finding the suspect folder with du didn’t reveal the culprit:</p>
+<blockquote><p>$ sudo du -h &#8211;max-depth=1 /<br />
+68K /tmp<br />
+0 /dev<br />
+4.0K /opt<br />
+4.0K /lib64<br />
+122M /lib<br />
+80K /root<br />
+0 /proc<br />
+4.0K /srv<br />
+148K /run<br />
+131M /home<br />
+18M /boot<br />
+1.1G /usr<br />
+2.7G /var<br />
+4.7M /sbin<br />
+4.2M /etc<br />
+5.7M /bin<br />
+4.0K /selinux<br />
+4.0K /media<br />
+113G /mnt<br />
+0 /sys<br />
+117G /</p></blockquote>
+<p>I suspected that some deleted files were still open, and sure enough:</p>
+<blockquote><p>$ sudo lsof | grep deleted<br />
+/var/log/elasticsearch/es.log.2015-07-13 (deleted)<br />
+tail 15409 root 4r REG 202,1 518265 267677 /var/log/elasticsearch/es.log.2015-01-30 (deleted)<br />
+tail 15409 root 5r REG 202,1 189942 262703 /var/log/elasticsearch/es.log.2015-01-31 (deleted)<br />
+… (remainder truncated for brevity)</p></blockquote>
+<p>checking the pid (15409) showed that a former tail -f process had been abandoned, but was still holding the files open. Killing the pid released the file lock and instantly reclaimed the disk space. Not a big deal, no harm done- but it raises the question: how did this happen?</p>
+<p><a href="file:///Users/willbutton/Library/Containers/com.blogo.Blogo/Data/Library/Caches/com.blogo.Blogo/15502929082_5e255851c3_b.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/07/1437937227_thumb.jpeg" alt="" align="middle" /></a></p>
+<p>In this instance, we’ve been in and out of these systems so many times. In most of those instances, it was in firefighting/triage mode and we considered ourselves lucky if the system was responsive enough to bring it back to life. It’s common when operating in this mode to lose connection, or have the box go non-responsive so it isn’t a huge surprise to find abandoned processes and some cleanup needed. It’s the collateral damage from firefighting.</p>
+<p>It’s there. Know that it exists and be prepared to clean up after disasters.</p>
+<div id="themify_builder_content-231" data-postid="231" class="themify_builder_content themify_builder_content-231 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-225" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">rekibnikufesin/node-http-server</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p>Just published this github repo for a simple node http server demonstrating the basic features of the http module. Keep watching http://egghead.io for the lesson soon!</p>
+<blockquote><p>node-http-server &#8211; A simple node http server used in the egghead.io lesson covering usage of the node http server.</p></blockquote>
+<p>Source: <em><a href="https://github.com/rekibnikufesin/node-http-server" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://github.com/rekibnikufesin/node-http-server', 'rekibnikufesin/node-http-server');">rekibnikufesin/node-http-server</a></em></p>
+<div id="themify_builder_content-225" data-postid="225" class="themify_builder_content themify_builder_content-225 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-222" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">It’s a cult, but it’s a good one</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p><a href="http://willbutton.co/wp-content/uploads/2015/07/haboob.jpg" target="_blank"><img class="alignleft" src="http://willbutton.co/wp-content/uploads/2015/07/haboob.jpg" alt="" align="left" /></a>Unless you are a member of <a href="http://www.crossfithaboob.com" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.crossfithaboob.com', 'CrossFit Haboob');" target="_blank">CrossFit Haboob</a>, you probably don’t know that I’m have my CrossFit L1 certification. I haven’t been there in a while, but I went back today to cheer on some friends from <a href="http://www.crossfitfourpeaks.com" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.crossfitfourpeaks.com', 'CrossFit Four Peaks');" target="_blank">CrossFit Four Peaks</a> in the 3rd annual Desert Dust Up Challenge. Though I went to be a spectator, there was no way I could let Ben and Sean down when they asked if I could help judge. They’ve given so much to me there is no way I could ever repay them.</p>
+<p>I ended up as a judge in the first heat for the athletes. Each athlete competed in a sequence of 3 twelve minute heats with 8 minutes between each. The event that I judged consisted of a 750m row, 100 wall balls, and as many pullups as you can manage within the 12 minute time cap. By design it’s humbling, it levels the playing field, and it leaves every athlete of every caliber wondering how they are going to complete the next two events. As a result, I was asked by nearly every athlete: what do I do now?</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/07/the-best-feeling-is-doing-what-people-say-you-can-not-do-motivational-quotes.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/07/the-best-feeling-is-doing-what-people-say-you-can-not-do-motivational-quotes.jpg" alt="" align="middle" /></a></p>
+<p>So what can I say to someone in the 30 seconds I have before they have to leave an prepare for the next event?</p>
+<p>Breathe.</p>
+<p>Seriously. Almost every athlete I saw today could benefit from that piece of advise. I could see it on their face during the workout:</p>
+<ul>
+<li>I can’t breathe</li>
+<li>It’s too heavy</li>
+<li>I’m going to throw up</li>
+<li>I’m blacking out</li>
+<li>It hurts</li>
+</ul>
+<p>and the list goes on, but the theme was common: they were letting the voice in their head take control. Focusing on a simple breathing technique can eliminate all of this. Note that while I said the technique is simple, in practice it’s quite difficult. The goal of breath control is to focus solely on watching the breath enter and leave your body. Emotionally it distracts your brain, preventing your conscious mind (or monkey mind) from chattering away with the thoughts listed above (that simply aren’t true). Physically, it triggers a calming effect in the nervous system that allows you to override the fake physical symptoms you are feeling and achieve a higher level of performance.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/07/inner-peace-yoga-meditation-truthinsideofyou.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/07/inner-peace-yoga-meditation-truthinsideofyou.jpg" alt="" align="middle" /></a></p>
+<p>So how do you do this “breath control” thing? It starts daily- just 5 minutes per day. That’s all, no infomercial. No product to buy. No celebrity endorsement. Don’t worry- you’ll pay. Five minutes is a long, long time when you are trying to focus. Here we go: first lesson right fucking now. In a few seconds, you’re going to click on the link below. It’s a five minute timer and for the entire five minutes you are going to breathe in for a count of five, hold your breath for a count of five, exhale for a count of five, the maintain empty lungs for a count of five. It’s a technique called “box breathing” that I learned from the website <a href="http://sealfit.com/the-big-4-of-mental-toughness-part-2/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://sealfit.com/the-big-4-of-mental-toughness-part-2/', 'www.sealfit.com');" target="_blank">www.sealfit.com</a>. A couple of notes:</p>
+<ul>
+<li>breathe into your belly- this is not the time to hold your “six pack pose”</li>
+<li>if a 5 count is too long, use 4. Or 3. Just do it. Whatever it is, accept it and improve over time.</li>
+<li>Your mind is going to wander. Everyone’s does, so when you start thinking about laundry, bills, work, or the cute dude/dudette down the block, gently bring your mind back to your breath.</li>
+<li>Feel the air cross your nostrils, feel the life-giving force of the oxygen in your lungs. That’s all.</li>
+<li>It’s ok to not be good, it’s the practice that matters.</li>
+</ul>
+<p>Ok, class is over- it’s time to get it done. Click this link now. I’ll see you in five minutes: <a href="http://e.ggtimer.com/5minutes" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://e.ggtimer.com/5minutes', 'http://e.ggtimer.com/5minutes');" target="_blank">http://e.ggtimer.com/5minutes</a></p>
+<p><img class="aligncenter" src="http://images.rapgenius.com/158f957028d50ddfea600e4eb06ae3ad.700x700x1.png" alt="" align="middle" /></p>
+<p>How do you feel? Chances are, you struggled your first time. You probably peeked a couple of times thinking that the timer wasn’t working. But there’s also a good chance that those last 60 seconds you hit this sweet, zen-filled, what-the-hell-is-that zone. If not, that’s cool too, we all start our journey some place different.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/07/05577302-33D6-4A5E-9156-37BB684BDF90.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/07/05577302-33D6-4A5E-9156-37BB684BDF90.jpg" alt="" align="middle" /></a></p>
+<p>That’s all there is to it. There are so many unbelievable benefits to every aspect of your life to doing this, and I’m not going to go into them because you can find that out later. For now, just do this for 5 minutes per day. Oh, I know. You’re busy. Hell, you spent 15 minutes just yesterday avoiding that aggravating co-worker who keeps trying to get you to go out for drinks and another 5 minutes being to polite to the telemarketer trying to pimp you out on some sweet, sweet re-financing. There’s no way you can sneak down to your car for five minutes to do this. But if you are one of the brave, the few, the dedicated who can pull this off: strap on your helmet because your life is about to change. For the simple premise alone that next time you’re grueling through a wod or a competition and your body starts to tell you lies, you’ll be grounded. You’ll say to yourself “nah, I got this next breath. I got this. I fuckin rock.”<br />
+And. You. Do.</p>
+<div id="themify_builder_content-222" data-postid="222" class="themify_builder_content themify_builder_content-222 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+					<div id="page-215" class="type-page" itemscope itemtype="http://schema.org/Article">
+						
+			<!-- page-title -->
+			 
+				<h2 class="page-title" itemprop="name">Shattering the statues of heroes</h2>
+				
+			<!-- /page-title -->
+
+			<div class="page-content entry-content" itemprop="articleBody">
+			
+				<p><a href="file:///Users/willbutton/Library/Containers/com.blogo.Blogo/Data/Library/Caches/com.blogo.Blogo/0_Se%CC%81ne%CC%80que_-_Muse%CC%81e_du_Prado_-_Cat._144_-_(2).JPG" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/06/1435558951_thumb.jpeg" alt="" align="middle" /></a></p>
+<p>This is a fun day, because today: we get to break stuff. I’ve noticed the similarity between mythology and corporate America. No, not the part where we believe in fantasy shit (like the fact that we don’t know our per-unit cost but claim to be able to forecest next quarter’s profit margin), but how we idolize people and practices. We sit around the campfire (a.k.a. meetings) and regale in the bard’s tale of an epic hero and his journey. Some might call it corporate culture. Maybe that is the right word, I don’t know- but let’s look at the side-effects of regailing in this epic tale.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/06/accolade.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/06/accolade.jpg" alt="" align="middle" /></a></p>
+<p>The hero of our story is named Larry. Why Larry? Because this is real life, and not everyone gets a bad ass name like “Onswot the dragon slayer” or “Frauhausen the Destroyer”. Larry is the first one in the office. He’s the last one to leave. He never takes vacation, and every time a critical system breaks: Larry is the only one who can save the fucking day. If Larry gets hit by a bus… Who knows? We all know a Larry. There is a strong possibility you might be a Larry yourself. Let’s give our story a little twist though (after all, what good is a hero’s tale without a twist?). Let’s view this story through the doe-eyed perception of our young intern.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/06/12819769039355.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/06/12819769039355.jpg" alt="" align="middle" /></a></p>
+<p>Our intern wants to be a part of this tribe, and wants to show to the tribal elders that he or she is worthy of battle, and worthy of wearing the tribe’s crest. But how?<br />
+Sorry to dishearten anyone looking for a happy ending, because you’ll not find one here. The path for the intern has been blazed by the hero, and his story is retold around the campfire repeatedly. If the intern is to prove his/her salt with this tribe- they must become the subject of campfire stories themselves. So they show up early, work through lunch, send emails at 3am, and strive to be the last out the door every night. But it’s not enough! No one calls their name out in vain when systems break! No one desperately searches for their home phone number in the middle of the night. Our intern struggles… how to achieve this level of heraldry?!?! The answer lies in the hero’s story itself: the intern must build single points of failure, document nothing, and share no knowledge to ensure that it is their name, and their name alone that echoes the hallways!</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/06/4599_LG.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/06/4599_LG.jpg" alt="" align="middle" /></a></p>
+<p>But how has this helped our tribe to prosper and grow? I’m afraid it hasn’t, and worse off: we perpetuated our own fate. And this, dear reader is where we pick up the statues of our heroes and cast them to the ground so that they shatter into thousands of pieces. Don’t get me wrong: this is not a blog post against Larry. Our hero did what he could, with what he had available. But, I’m sure if we asked our hero directly, rather than being the hero- he’d probably rather be at home watching Family Guy.<br />
+Weaving a different tale: Now with our statues shattered on the floor, we must rebuild our culture, not forsaking where we came from, but clearly identifying who will get us where we’re going. How do we recognize the characteristics of these individuals? For starters, look to see who the last one to work is. No, not the person 5 minutes late. 30 minutes late? Nope. How about the guy who shows up just before lunch.</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/06/spicoli_ready.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/06/spicoli_ready.jpg" alt="" align="middle" /></a></p>
+<p>WHAT? Am I even to be taken seriously at this point?<br />
+Quite possibly.<br />
+When does this individual go to lunch? Shortly after arriving to work? Good. He (she) is still a candidate.<br />
+It’s 5 o’clock now. Has this person been gone for hours? Yes? Oh boy, this is getting promising! Now for the final test&#8230;</p>
+<p><a href="http://willbutton.co/wp-content/uploads/2015/06/sshot4e9d0b8560573.jpg" target="_blank"><img class="aligncenter" src="http://willbutton.co/wp-content/uploads/2015/06/sshot4e9d0b8560573.jpg" alt="" align="middle" /></a></p>
+<p>The systems that this person is responsible for: do they ever go down? Rarely? When they do, is it well-documented, with a small army of people who either know how, or can quickly learn to recover them without so much as a blink of an eye? If all of this is true, then you have found the individual who produces the desired output of the company with the least amount of time and effort possible. This should be the goal. Not hours per week worked, but value per week delivered.<br />
+Save the hero shit for when your telling your kids about what you do at work. Added bonus: follow this plan and you’ll actually have the time to do so.</p>
+<div id="themify_builder_content-215" data-postid="215" class="themify_builder_content themify_builder_content-215 themify_builder themify_builder_front">
+	</div>
+<!-- /themify_builder_content -->			
+								
+								
+				<!-- comments -->
+																	<!-- /comments -->
+				
+			</div>
+			<!-- /.post-content -->
+		
+			</div><!-- /.type-page -->
+				
+				        
+			</div>
+	<!-- /content -->
+    
+	
+</div>
+<!-- /layout-container -->
+	
+
+							</div>
+			<!-- /body -->
+							<div class="footer-widgets-wrap">
+					
+	<div class="footer-widgets pagewidth clearfix">
+
+								<div class="col3-1 first">
+							</div>
+								<div class="col3-1 ">
+							</div>
+								<div class="col3-1 ">
+							</div>
+		
+	</div>
+	<!-- /.footer-widgets -->
+
+				</div>
+			
+							<div id="footerwrap">
+
+					
+					<footer id="footer" class="pagewidth clearfix">
+
+						
+						<div class="footer-text clearfix">
+
+							<div class="one">&copy; <a href="http://willbutton.co">WillButton.co</a> 2016</div>
+							<div class="two">Powered by <a href="http://wordpress.org">WordPress</a> &bull; <a href="http://themify.me">Themify WordPress Themes</a></div>
+						</div>
+						<!-- /footer-text -->
+
+						
+					</footer>
+					<!-- /#footer -->
+
+					
+				</div>
+				<!-- /#footerwrap -->
+			
+		</div>
+		<!-- /#pagewrap -->
+
+		
+		<!-- wp_footer -->
+				
+
+<script type='text/javascript' src='http://willbutton.co/wp-content/plugins/simple-share-buttons-adder/js/ssba.min.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/themify/js/waypoints.min.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/themify/themify-builder/js/themify.builder.module.plugins.js?ver=2.3.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tbLocalScript = {"isTouch":"","isAnimationActive":"1","isParallaxActive":"1","animationInviewSelectors":[".module.wow",".themify_builder_content > .themify_builder_row",".module_row",".builder-posts-wrap > .post.wow",".fly-in > .post",".fly-in .row_inner > .tb-column",".fade-in > .post",".fade-in .row_inner > .tb-column",".slide-up > .post",".slide-up .row_inner > .tb-column"],"createAnimationSelectors":[],"backgroundSlider":{"autoplay":5000,"speed":2000},"animationOffset":"100","videoPoster":"http:\/\/willbutton.co\/wp-content\/themes\/themify-landing\/themify\/themify-builder\/img\/blank.png","backgroundVideoLoop":"yes"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/themify/themify-builder/js/themify.builder.script.js?ver=2.3.3'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/themify/js/themify.sidemenu.min.js?ver=1.0.8'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/js/jquery.isotope.min.js?ver=1.0.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var themifyScript = {"lightbox":{"lightboxSelector":".lightbox","lightboxOn":true,"lightboxContentImages":false,"lightboxContentImagesSelector":".post-content a[href$=jpg],.page-content a[href$=jpg],.post-content a[href$=gif],.page-content a[href$=gif],.post-content a[href$=png],.page-content a[href$=png],.post-content a[href$=JPG],.page-content a[href$=JPG],.post-content a[href$=GIF],.page-content a[href$=GIF],.post-content a[href$=PNG],.page-content a[href$=PNG],.post-content a[href$=jpeg],.page-content a[href$=jpeg],.post-content a[href$=JPEG],.page-content a[href$=JPEG]","theme":"pp_default","social_tools":false,"allow_resize":true,"show_title":false,"overlay_gallery":false,"screenWidthNoLightbox":600,"deeplinking":false,"contentImagesAreas":".post, .type-page, .type-highlight, .type-slider","gallerySelector":".gallery-icon > a[href$=jpg],.gallery-icon > a[href$=gif],.gallery-icon > a[href$=png],.gallery-icon > a[href$=JPG],.gallery-icon > a[href$=GIF],.gallery-icon > a[href$=PNG],.gallery-icon > a[href$=jpeg],.gallery-icon > a[href$=JPEG]","lightboxGalleryOn":true},"lightboxContext":"#pagewrap","isTouch":"false","fixedHeader":"fixed-header","ajax_nonce":"0cd1dc67ff","ajax_url":"http:\/\/willbutton.co\/wp-admin\/admin-ajax.php","smallScreen":"760","resizeRefresh":"250","parallaxHeader":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/js/themify.script.js?ver=1.0.8'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/themify/js/themify.gallery.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-content/themes/themify-landing/themify/js/lightbox.js?ver=2.3.3'></script>
+<script type='text/javascript' src='http://willbutton.co/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+			<script type="text/javascript">
+				if ( 'object' === typeof tbLocalScript ) {
+					tbLocalScript.transitionSelectors = ".js.csstransitions .module.wow, .js.csstransitions .themify_builder_content > .themify_builder_row, .js.csstransitions .module_row, .js.csstransitions .builder-posts-wrap > .post.wow, .js.csstransitions .fly-in > .post, .js.csstransitions .fly-in .row_inner > .tb-column, .js.csstransitions .fade-in > .post, .js.csstransitions .fade-in .row_inner > .tb-column, .js.csstransitions .slide-up > .post, .js.csstransitions .slide-up .row_inner > .tb-column";
+				}
+			</script>
+			
+<script>
+	jQuery(window).load(function(){ jQuery(window).resize(); jQuery( 'body' ).addClass( 'page-loaded' ); });
+</script>
+	</body>
+</html>

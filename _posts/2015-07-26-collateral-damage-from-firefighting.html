@@ -1,0 +1,60 @@
+---
+layout: post
+status: publish
+published: true
+title: Collateral damage from firefighting
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 231
+wordpress_url: http://willbutton.co/?p=231
+date: '2015-07-26 12:23:00 -0700'
+date_gmt: '2015-07-26 19:23:00 -0700'
+---
+<p><a href="file:&#47;&#47;&#47;Users&#47;willbutton&#47;Library&#47;Containers&#47;com.blogo.Blogo&#47;Data&#47;Library&#47;Caches&#47;com.blogo.Blogo&#47;DOD_mobile_aircraft_firefighting_training_device.jpg" target="_blank"><img class="aligncenter" src="{{ site.baseurl }}/images/07&#47;1437936431_thumb.jpeg" alt="" align="middle" &#47;><&#47;a></p>
+<p>I&rsquo;ve spent a lot of time over the last 6 months in and out of <a href="https:&#47;&#47;www.elastic.co&#47;" target="_blank">elasticsearch<&#47;a>, sometimes more than I&rsquo;d like. Just today, I received a disk space alert on one of the data nodes. Upon logging in, a disk space check confirmed it:</p>
+<blockquote><p>Filesystem Size Used Avail Use% Mounted on<br />
+rootfs 20G 16G 3.7G 81% &#47;<br />
+udev 10M 0 10M 0% &#47;dev<br />
+tmpfs 1.5G 148K 1.5G 1% &#47;run<br />
+&#47;dev&#47;xvda1 20G 16G 3.7G 81% &#47;<br />
+tmpfs 5.0M 0 5.0M 0% &#47;run&#47;lock<br />
+tmpfs 3.0G 0 3.0G 0% &#47;run&#47;shm<br />
+&#47;dev&#47;md0 985G 114G 822G 13% &#47;mnt&#47;es<&#47;blockquote><br />
+but finding the suspect folder with du didn&rsquo;t reveal the culprit:</p>
+<blockquote><p>$ sudo du -h --max-depth=1 &#47;<br />
+68K &#47;tmp<br />
+0 &#47;dev<br />
+4.0K &#47;opt<br />
+4.0K &#47;lib64<br />
+122M &#47;lib<br />
+80K &#47;root<br />
+0 &#47;proc<br />
+4.0K &#47;srv<br />
+148K &#47;run<br />
+131M &#47;home<br />
+18M &#47;boot<br />
+1.1G &#47;usr<br />
+2.7G &#47;var<br />
+4.7M &#47;sbin<br />
+4.2M &#47;etc<br />
+5.7M &#47;bin<br />
+4.0K &#47;selinux<br />
+4.0K &#47;media<br />
+113G &#47;mnt<br />
+0 &#47;sys<br />
+117G &#47;<&#47;blockquote><br />
+I suspected that some deleted files were still open, and sure enough:</p>
+<blockquote><p>$ sudo lsof | grep deleted<br />
+&#47;var&#47;log&#47;elasticsearch&#47;es.log.2015-07-13 (deleted)<br />
+tail 15409 root 4r REG 202,1 518265 267677 &#47;var&#47;log&#47;elasticsearch&#47;es.log.2015-01-30 (deleted)<br />
+tail 15409 root 5r REG 202,1 189942 262703 &#47;var&#47;log&#47;elasticsearch&#47;es.log.2015-01-31 (deleted)<br />
+&hellip; (remainder truncated for brevity)<&#47;blockquote><br />
+checking the pid (15409) showed that a former tail -f process had been abandoned, but was still holding the files open. Killing the pid released the file lock and instantly reclaimed the disk space. Not a big deal, no harm done- but it raises the question: how did this happen?</p>
+<p><a href="file:&#47;&#47;&#47;Users&#47;willbutton&#47;Library&#47;Containers&#47;com.blogo.Blogo&#47;Data&#47;Library&#47;Caches&#47;com.blogo.Blogo&#47;15502929082_5e255851c3_b.jpg" target="_blank"><img class="aligncenter" src="{{ site.baseurl }}/images/1437937227_thumb.jpeg" alt="" align="middle" &#47;><&#47;a></p>
+<p>In this instance, we&rsquo;ve been in and out of these systems so many times. In most of those instances, it was in firefighting&#47;triage mode and we considered ourselves lucky if the system was responsive enough to bring it back to life. It&rsquo;s common when operating in this mode to lose connection, or have the box go non-responsive so it isn&rsquo;t a huge surprise to find abandoned processes and some cleanup needed. It&rsquo;s the collateral damage from firefighting.</p>
+<p>It&rsquo;s there. Know that it exists and be prepared to clean up after disasters.</p>

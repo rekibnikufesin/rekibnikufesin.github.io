@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: Node&rsquo;s nextTick is brotastic
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 187
+wordpress_url: http://willbutton.co/?p=187
+date: '2015-04-30 21:50:07 -0700'
+date_gmt: '2015-05-01 04:50:07 -0700'
+---
+<p>It&rsquo;s true. Node&rsquo;s nextTick function is simply brotastic. You just can&rsquo;t argue that. <&#47;p><img src="{{ site.baseurl }}/images/brotastic_t_shirt-rd7c298f33c64486eae21c71987cae1a8_8041h_512.jpg" align="middle" class="aligncenter">
+<p><br>If you aren&rsquo;t familiar with it, you may be questioning my logic. Bear with me fellow brosefs, I&rsquo;ll make myself understood. Consider a piece of code like this:<br>console.log(&lsquo;start&rsquo;);<br>process.nextTick(function() {<br>  console.log(&lsquo;nextTick is brotastic&rsquo;);<br>});<br>console.log(&lsquo;scheduled&rsquo;);<&#47;p>
+<p>When you run it, you&rsquo;ll see the console output:<br><&#47;p><img src="{{ site.baseurl }}/images/1430455097_thumb.png" align="middle" class="aligncenter">
+<p>When node encounters the nextTick function, it skips it for now, but will execute it on the next cycle. It&rsquo;s the equivalent of asking a bro if he wants to go for pizza, to which he replies, &ldquo;nah bro- but hit me up next time!"<&#47;p><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;04&#47;1430455554.gif" target="_blank"><img src="{{ site.baseurl }}/images/1430455554.gif" align="middle" class="aligncenter"><&#47;a>
+<p><br>Remembering that node is an event loop processor, we can understand that it can do this as it just loops through the application over and over. Why not just use <br>setTimeout(function, 0);<br>then? Answer: performance. The nextTick function does not require the IO resources that setTimeout does, so while functionally they are the same- under heavy load nextTick scales much better and leaves more resources for your app.<&#47;p>
+<p>May the bro be with you.<&#47;p></p>

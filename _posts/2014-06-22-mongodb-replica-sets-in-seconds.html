@@ -1,0 +1,58 @@
+---
+layout: post
+status: publish
+published: true
+title: MongoDB Replica Sets in Seconds
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+excerpt: "[caption id=\"attachment_60\" align=\"aligncenter\" width=\"254\"]<img class=\"size-full
+  wp-image-60\" src=\"http:&#47;&#47;two4seven.me&#47;wp-content&#47;uploads&#47;2014&#47;06&#47;wheel-invention.gif\"
+  alt=\"Caveman with wheel\" width=\"254\" height=\"219\" &#47;> DevOps in progress[&#47;caption]\r\n\r\nSometimes
+  I need an experimental mongodb replica set, to test-drive something I'm working
+  on, or to simulate a scenario I see&nbsp;in a production environment.\r\n\r\nWhat
+  I <strong>don't<&#47;strong> want to do is screw up my local development environment.&nbsp;At
+  the same time, I don't want to drag around another environment that has to be updated,
+  maintained, etc.\r\n\r\nEnter: ReplSetTest().\r\n\r\nThe&nbsp;ReplSetTest function&nbsp;allows
+  you to quickly spin up a mongodb environment suitable for testing or rapid prototyping,
+  and tear down the environment when completed. In this post, we'll cover how to use
+  the ReplSetTest function to quickly set up&nbsp;a mongodb replica set."
+wordpress_id: 56
+wordpress_url: http://two4seven.me/?p=56
+date: '2014-06-22 17:01:17 -0700'
+date_gmt: '2014-06-22 17:01:17 -0700'
+---
+<p>[caption id="attachment_60" align="aligncenter" width="254"]<img class="size-full wp-image-60" src="{{ site.baseurl }}/images/wheel-invention.gif" alt="Caveman with wheel" width="254" height="219" &#47;> DevOps in progress[&#47;caption]</p>
+<p>Sometimes I need an experimental mongodb replica set, to test-drive something I'm working on, or to simulate a scenario I see&nbsp;in a production environment.</p>
+<p>What I <strong>don't<&#47;strong> want to do is screw up my local development environment.&nbsp;At the same time, I don't want to drag around another environment that has to be updated, maintained, etc.</p>
+<p>Enter: ReplSetTest().</p>
+<p>The&nbsp;ReplSetTest function&nbsp;allows you to quickly spin up a mongodb environment suitable for testing or rapid prototyping, and tear down the environment when completed. In this post, we'll cover how to use the ReplSetTest function to quickly set up&nbsp;a mongodb replica set.<a id="more"></a><a id="more-56"></a></p>
+<p>The ReplSetTest function requires two&nbsp;parameters to get it started; name and nodes. The name parameter is really as simple as it sounds: the name of the ReplicaSet you want to create. Nodes have a few more options-- at a minimum, it requires the number of nodes you want to create. Optionally, it contains&nbsp;the names of the nodes to be created, and any specific parameters to be used. To spin up a new replica set, do the following from a terminal window:</p>
+<blockquote><p>mongo --nodb<br />
+var rst = new ReplSetTest( { name: 'rsTest', nodes: 3&nbsp;} )<&#47;blockquote><br />
+You'll notice that we've given the name "rsTest" to our replica set and declared 3 nodes&nbsp;to be created. Now type:</p>
+<blockquote><p>rst.startSet()<&#47;blockquote><br />
+and watch the magic happen. After a few minutes, open another terminal window and you'll see three instances of mongod running: <a href="http:&#47;&#47;two4seven.me&#47;wp-content&#47;uploads&#47;2014&#47;06&#47;running_mongod.png"><img class="alignleft size-large wp-image-63" src="{{ site.baseurl }}/images/running_mongod-1024x63.png" alt="running mongod instances" width="1024" height="63" &#47;><&#47;a></p>
+<p>&nbsp;</p>
+<p>Now that the instances are running, we&nbsp;still have to initiate the replica set and add the nodes to the replica set ourselves. This can be done with:</p>
+<blockquote><p>rs.initiate()<br />
+rs.add("Wills-MacBook-Pro.local:31001")<br />
+rs.add("Wills-MacBook-Pro.local:31002")<&#47;blockquote><br />
+Your replica set should now sync up and be fully available: <a href="http:&#47;&#47;two4seven.me&#47;wp-content&#47;uploads&#47;2014&#47;06&#47;rs.status.png"><img class="aligncenter wp-image-64 size-medium" src="{{ site.baseurl }}/images/rs.status-222x300.png" alt="replicaset status" width="222" height="300" &#47;><&#47;a> There is one other feature I want to cover on this.</p>
+<p>Let's say we call ReplSetTest with the following options:</p>
+<blockquote><p>var rst = new ReplSetTest( { name: 'rsTest', nodes: { node1: {}, node2: {}, arb: {arbiter: true} } } )<&#47;blockquote><br />
+This time, we've specified the nodes we want rather than just supplying an integer. You will also see that we've named our third node "arb" and passed in an object with "arbiter: true". This will do exactly what it looks like: it will create the 3rd node as an arbiter. We can initiate the replica set and add the nodes:</p>
+<blockquote><p>rs.initiate()<br />
+rs.add("Wills-MacBook-Pro.local:31001")<br />
+rs.addArb("Wills-MacBook-Pro.local:31002")<&#47;blockquote><br />
+And inspect after the replica set initiates: <a href="http:&#47;&#47;two4seven.me&#47;wp-content&#47;uploads&#47;2014&#47;06&#47;rs.status_arbiter.png"><img class="aligncenter size-medium wp-image-65" src="{{ site.baseurl }}/images/rs.status_arbiter-249x300.png" alt="replicaset status with arbiter" width="249" height="300" &#47;><&#47;a> A few final notes on the ReplSetTest function:</p>
+<ul>
+<li>You can control many of the node options by adding additional options inside the node object. Examples include smallfiles, port number, rest interface and the db path<&#47;li>
+<li>Any node starting with the letter "a" in its name is automatically configured as an arbiter (eliminating the need to specify "arbiter: true")<&#47;li>
+<li>Many more features exist, allowing for quite a bit of creativity and control. For more information, see &nbsp;<a href="http:&#47;&#47;api.mongodb.org&#47;js&#47;current&#47;symbols&#47;src&#47;src_mongo_shell_replsettest.js.html" target="_blank">http:&#47;&#47;api.mongodb.org&#47;js&#47;current&#47;symbols&#47;src&#47;src_mongo_shell_replsettest.js.html<&#47;a><&#47;li><br />
+<&#47;ul><br />
+[mailchimpsf_form]</p>

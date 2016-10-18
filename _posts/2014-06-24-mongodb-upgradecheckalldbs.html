@@ -1,0 +1,31 @@
+---
+layout: post
+status: publish
+published: true
+title: 'MongoDB upgradeCheckAllDBs '
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+excerpt: I learned the hard way today on the best way to use MongoDB's upgradeCheckAllDBs
+  function. I have been preparing to upgrade our dev environment from 2.4.10 to 2.6.3.
+  As part of the recommended upgrade procedure (<a href="http:&#47;&#47;docs.mongodb.org&#47;manual&#47;release-notes&#47;2.6-upgrade&#47;">http:&#47;&#47;docs.mongodb.org&#47;manual&#47;release-notes&#47;2.6-upgrade&#47;<&#47;a>)
+  - I ran db.upgradeCheckAllDBs(). As I watched the output scroll by,
+wordpress_id: 83
+wordpress_url: http://two4seven.me/?p=83
+date: '2014-06-24 17:15:06 -0700'
+date_gmt: '2014-06-24 17:15:06 -0700'
+---
+<p>I learned the hard way today on the best way to use MongoDB's upgradeCheckAllDBs function. I have been preparing to upgrade our dev environment from 2.4.10 to 2.6.3. As part of the recommended upgrade procedure (<a href="http:&#47;&#47;docs.mongodb.org&#47;manual&#47;release-notes&#47;2.6-upgrade&#47;">http:&#47;&#47;docs.mongodb.org&#47;manual&#47;release-notes&#47;2.6-upgrade&#47;<&#47;a>) - I ran db.upgradeCheckAllDBs(). As I watched the output scroll by,<a id="more"></a><a id="more-83"></a></p>
+<p>I took note of some of the errors being thrown. I investigated them, and started the conversation with some of our developers on how to address them. As I came back to my terminal after several hours, I scrolled back through the buffer, and upon reaching the end of the buffer-- decided to look for the log file where I can turn the output of upgradeCheckAllDBs into a plan.</p>
+<p><img class="aligncenter size-medium wp-image-84" src="{{ site.baseurl }}/images/homer-doh1-300x122.jpg" alt="DOH!" width="300" height="122" &#47;>That's when I realized that no such log file existed.</p>
+<p>Fortunately, I had only lost a few hours- the damage could've been much worse: there are 3 databases being upgraded with over 750GB of data and the number of documents is in the 100s of millions.</p>
+<p>Though not specified in the release notes (but it is mentioned on the upgradeCheckAllDBs page:&nbsp;<a href="http:&#47;&#47;docs.mongodb.org&#47;manual&#47;reference&#47;method&#47;db.upgradeCheckAllDBs&#47;">http:&#47;&#47;docs.mongodb.org&#47;manual&#47;reference&#47;method&#47;db.upgradeCheckAllDBs&#47;<&#47;a>), it's a good idea to run the method externally and send the output to a log file, similar to this:</p>
+<p style="color: #222222;">.&#47;mongo myMongosRouter:27017&#47;admin --eval <span class="s2" style="color: #4070a0;">"db.getMongo().setSlaveOk(); db.upgradeCheckAllDBs();"<&#47;span> | tee &#47;tmp&#47;upgradecheckalldbs.txt<&#47;p><br />
+This will ensure that the output is persisted to a log file, where it can be reviewed and acted upon.</p>
+<p>After the fact note:<br />
+Having the output in a log file will make you very happy when you check back in on your screen session to find this:</p>
+<p><a href="http:&#47;&#47;two4seven.me&#47;wp-content&#47;uploads&#47;2014&#47;06&#47;no_cursor.png"><img class="aligncenter wp-image-89 size-full" src="{{ site.baseurl }}/images/no_cursor.png" alt="no cursor" width="833" height="282" &#47;><&#47;a></p>

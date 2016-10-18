@@ -1,0 +1,86 @@
+---
+layout: post
+status: publish
+published: true
+title: Tmuxinator and the Art of Laziness
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 4363
+wordpress_url: http://willbutton.co/?p=4363
+date: '2016-01-31 20:08:25 -0700'
+date_gmt: '2016-02-01 03:08:25 -0700'
+---
+<p><img class="alignleft size-medium wp-image-4365" src="{{ site.baseurl }}/images/laziness-300x163.jpg" alt="laziness" width="300" height="163" &#47;>If you've tried <a href="https:&#47;&#47;tmux.github.io&#47;">tmux<&#47;a> and been frustrated, you are not alone. This post will not help with that, but it will provide more incentive to +1 your laziness skill by introducing you to <a href="https:&#47;&#47;github.com&#47;tmuxinator&#47;tmuxinator">tmuxinator<&#47;a>. I'm not going to explain what either tool is, or tell you how to install it: the respective websites for each already do that much better than I can (besides, I'm lazy and repeating information found elsewhere contradicts my inherent laziness). What you will learn is how I use tmuxinator to streamline common workflow scenarios.</p>
+<h3>Scenario 1:&nbsp;Quickly ssh to every server of a given type.<&#47;h3><br />
+I manage multiple elasticsearch clusters. It's common for one of the clusters&nbsp;to blow up and I need to see what is going on. In disaster scenarios, I don't like to rely on external components such as log shipping or health checks to feed me info. I want to go to the source. I have a tmuxinator config file for each cluster so all I merely have to open iTerm and type 'mux aardvark' to access every server in the aardvark cluster. The magic behind this comes from the aardvark.yml file in the .tmuxinator folder of my home directory. It looks like this:</p>
+<blockquote><p># ~&#47;.tmuxinator&#47;aardvark.yml</p>
+<p>name:&nbsp;Aardvark ES Cluster<br />
+root: ~&#47;</p>
+<p>&nbsp;</p>
+<p>windows:<br />
+- aardvark:<br />
+layout: tiled<br />
+panes:<br />
+- ssh will.button@192.168.99.147<br />
+- ssh will.button@192.168.99.202<br />
+- ssh will.button@192.168.99.27<&#47;blockquote><br />
+It's really straightforward.<br />
+When tmuxinator fires up with the aardvark parameter, it creates a window named "aardvark"</p>
+<blockquote><p>windows:<br />
+- aardvark:<&#47;blockquote><br />
+Inside that window, it uses a tiled layout.</p>
+<blockquote><p>layout: tiled<&#47;blockquote><br />
+And then opens 3 ssh sessions to the 3 servers listed. It actually runs that as a command, so any command your system understands will be run in its respective pane.</p>
+<blockquote><p>panes:<br />
+- ssh will.button@192.168.99.147<br />
+- ssh will.button@192.168.99.202<br />
+- ssh will.button@192.168.99.27<&#47;blockquote><br />
+Boom! One command logs me into 3 servers. That's laziness in action!</p>
+<h3>Scenario 2: Developing puppet modules.<&#47;h3><br />
+Developing puppet modules requires a bit more setup. I need vagrant images running for my puppetmaster and for the dev instance I'm developing for. I need to be logged into the instances, and they need to be started if they aren't already. I also need my editor opened up so that I can edit files. All of this happens with the command 'mux puppet'. Let's see how that works:</p>
+<blockquote><p># ~&#47;.tmuxinator&#47;puppet.yml</p>
+<p>name: puppet<br />
+root: ~&#47;devops&#47;puppet</p>
+<p>windows:<br />
+- editor:<br />
+vim<br />
+- vagrant:<br />
+layout: main-vertical<br />
+panes:<br />
+- puppetmaster:<br />
+- cd ~&#47;vagrant&#47;puppetmaster<br />
+- vagrant up<br />
+- vagrant ssh<br />
+- sudo su<br />
+- cd &#47;var&#47;lib&#47;hiera<br />
+- agent:<br />
+- cd ~&#47;vagrant&#47;debian8<br />
+- vagrant up<br />
+- vagrant ssh<br />
+- sudo su<&#47;blockquote><br />
+Starting at the top, the shell root is set to</p>
+<blockquote><p>~&#47;devops&#47;puppet<&#47;blockquote><br />
+Then a window is created named 'editor' and vim is launched.</p>
+<blockquote><p>&nbsp; - editor:<br />
+vim<&#47;blockquote><br />
+A second window named 'vagrant' is created, with two panes: one for the puppetmaster and one for the agent. A series of commands is run on each that brings the instance up, logs me into it, and gains root access.</p>
+<blockquote><p>&nbsp; - vagrant:<br />
+layout: main-vertical<br />
+panes:<br />
+- puppetmaster:<br />
+- cd ~&#47;vagrant&#47;puppetmaster<br />
+- vagrant up<br />
+- vagrant ssh<br />
+- sudo su<br />
+- cd &#47;var&#47;lib&#47;hiera<br />
+- agent:<br />
+- cd ~&#47;vagrant&#47;debian8<br />
+- vagrant up<br />
+- vagrant ssh<br />
+- sudo su</p>
+<p>All said and done, it's an extremely convenient way of launching my puppet environment and&nbsp;automating my development process. Also cool is to note that this tmuxinator config works the same whether I've destroyed my virtual boxes and they need to be recreated from scratch or they simply need to be powered back on.<&#47;blockquote></p>

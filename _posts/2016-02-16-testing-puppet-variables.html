@@ -1,0 +1,91 @@
+---
+layout: post
+status: publish
+published: true
+title: Testing Puppet Variables
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 4370
+wordpress_url: http://willbutton.co/?p=4370
+date: '2016-02-16 11:35:57 -0700'
+date_gmt: '2016-02-16 18:35:57 -0700'
+---
+<p>I'm sure this exists somewhere, but I'm adding it here because it caused me grief recently. In some puppet modules, you have variables that affect the actions taken by the module. For example: I recently created a logstash module. In the module, I support a plugin for rsync which listens on port 514, a protected port.</p>
+<p>I had two options to deal with it:</p>
+<ul>
+<li>Bind logstash to a higher port and forward it to port 514 using iptables<&#47;li>
+<li>Grant java permission to bind to port 514 using setcap<&#47;li><br />
+<&#47;ul><br />
+I chose the second.</p>
+<p>In doing so, I need to grant permissions via setcap to the java process- but which java? I needed to support multiple versions. I created a custom fact to get the version of java on the system:</p>
+<blockquote><p># hardware_platform.rb</p>
+<p>Facter.add('logstash_java_version') do<br />
+setcode do<br />
+ver = Facter::Core::Execution.exec('java -version 2>&amp;1 | head -n1')<br />
+if ver =~ &#47;1\.8&#47;<br />
+'1.8'<br />
+elsif ver =~ &#47;1\.7&#47;<br />
+'1.7'<br />
+else<br />
+'unknown'<br />
+end<br />
+end<br />
+end<&#47;blockquote><br />
+This resulted in a fact named 'logstash_java_version' with a value of 1.8, 1.7 or unknown (java 8 and 7 are the only ones I want to support at the time of this writing).</p>
+<p>Now in my logstash manifest, I create a custom variable to get the path to the java executable. I do this because setcap needs the exact path to work.</p>
+<blockquote><p>case $::logstash_java_version {<br />
+'1.7': {<br />
+# path to java<br />
+$path = '&#47;usr&#47;lib&#47;jvm&#47;jdk-7-oracle-x64&#47;jre&#47;bin&#47;java'<br />
+}<br />
+'1.8': {<br />
+# path to java8<br />
+$path = '&#47;usr&#47;lib&#47;jvm&#47;jdk-8-oracle-x64&#47;jre&#47;bin&#47;java'<br />
+}<br />
+default: {<br />
+fail("Unsupported version of Java on ${module_name}")<br />
+}<br />
+}<&#47;blockquote><br />
+Finally, this allows me to create a single exec resource that will work with either of the supported java versions:</p>
+<blockquote><p>exec {'setcap':<br />
+command => "setcap -v 'cap_net_bind_service=+ep' ${path}",<br />
+unless => "sudo getcap -v ${path} | grep cap_net_bind_service+ep",<br />
+require => Package['logstash'],<br />
+}<&#47;blockquote><br />
+Boom!<br />
+Except... No tests for this, and untested code is unusable code. So how can we test this? Especially given that we have a variable that can drive the outcome of our manifest.</p>
+<p>My tests look like this. Starting with Java 7:</p>
+<blockquote><p>context 'with java 7' do<br />
+let (:facts) {{ :memorysize_mb => '4', :logstash_java_version => '1.7' }}<br />
+it 'should have the path to java' do<br />
+should contain_exec('setcap').with({<br />
+'command' => "setcap -v 'cap_net_bind_service=+ep' &#47;usr&#47;lib&#47;jvm&#47;jdk-7-oracle-x64&#47;jre&#47;bin&#47;java",<br />
+'unless' => "sudo getcap -v &#47;usr&#47;lib&#47;jvm&#47;jdk-7-oracle-x64&#47;jre&#47;bin&#47;java | grep cap_net_bind_service+ep"<br />
+})<br />
+end<br />
+end<&#47;blockquote><br />
+Java 8 looks the same, except substituting 1.8 as the value for logstash_java_version:</p>
+<blockquote><p>context 'with java 8' do<br />
+let (:facts) {{ :memorysize_mb => '4', :logstash_java_version => '1.8' }}<br />
+it 'should have the path to java' do<br />
+should contain_exec('setcap').with({<br />
+'command' => "setcap -v 'cap_net_bind_service=+ep' &#47;usr&#47;lib&#47;jvm&#47;jdk-8-oracle-x64&#47;jre&#47;bin&#47;java",<br />
+'unless' => "sudo getcap -v &#47;usr&#47;lib&#47;jvm&#47;jdk-8-oracle-x64&#47;jre&#47;bin&#47;java | grep cap_net_bind_service+ep"<br />
+})<br />
+end<br />
+end<&#47;blockquote><br />
+And we can test for an unsupported version of Java too:</p>
+<blockquote><p>context 'with an unknown java version' do<br />
+let (:facts) {{ :memorysize_mb => '4', :logstash_java_version => '0' }}<br />
+it 'should fail' do<br />
+expect{<br />
+should contain_class('logstash')<br />
+}.to raise_error(Puppet::Error, &#47;Unsupported version&#47;)<br />
+end<br />
+end<&#47;blockquote><br />
+Aw snap! How 'bout that?!?! Custom facts, testing variables, and validating the operation of our module!</p>

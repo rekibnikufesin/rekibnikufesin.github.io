@@ -1,0 +1,51 @@
+---
+layout: post
+status: publish
+published: true
+title: Desert Code Camp 2014
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 43
+wordpress_url: http://two4seven.me/?p=43
+date: '2014-04-04 00:19:19 -0700'
+date_gmt: '2014-04-04 00:19:19 -0700'
+---
+<p>Thanks so much for attending Desert Code Camp 2014! I hope you gained as much from the event as I did!</p>
+<p>Now- &nbsp;on to the good stuff!</p>
+<p>If you're looking for the notes for my talk on Sharding Production Databases- click <a title="Sharding Production Databases with MongoDB" href="http:&#47;&#47;two4seven.me&#47;sharding&#47;">here<&#47;a>.</p>
+<p>For those of you interested in the Practical MongoDB session- please continue reading.</p>
+<p>Github code: <a href="https:&#47;&#47;github.com&#47;rekibnikufesin&#47;d3atdcc">https:&#47;&#47;github.com&#47;rekibnikufesin&#47;d3atdcc<&#47;a><br />
+Slideshare notes:&nbsp;<a href="http:&#47;&#47;www.slideshare.net&#47;willbutton56&#47;practical-mongodb">http:&#47;&#47;www.slideshare.net&#47;willbutton56&#47;practical-mongodb<&#47;a><br />
+Facebook Graph Explorer:&nbsp;<a href="https:&#47;&#47;developers.facebook.com&#47;tools&#47;explorer&#47;145634995501895&#47;?method=GET&amp;path=me%3Ffields%3Did%2Cname&amp;version=">https:&#47;&#47;developers.facebook.com&#47;tools&#47;explorer&#47;145634995501895&#47;?method=GET&amp;path=me%3Ffields%3Did%2Cname&amp;version=<&#47;a></p>
+<p>As I mentioned during the presentation- the code on GitHub won't be actively maintained, it's for reference only. It's build off of the current MEAN Stack git (as of this writing) and it's far too easy to clone that stack and setup the pieces you need, rather than trying to recreate the wheel. In summary- we did 5 things:</p>
+<ol>
+<li>Clone the current MEAN Stack from git<&#47;li>
+<li>Setup a Facebook app
+<ol>
+<li>Created a developer account at https:&#47;&#47;developers.facebook.com<&#47;li>
+<li>Created a new app inside of Facebook to get an api access key and secret<&#47;li>
+<li>Entered the details from step #2 into the clientid&#47;client secret fields of config&#47;env&#47;development.js<&#47;li><br />
+<&#47;ol><br />
+<&#47;li></p>
+<li>Created a server side URL that allows us to download the posts for a newsfeed for a logged-in user
+<ol>
+<li>The controller is built in app&#47;controllers&#47;fbfeeds.js<&#47;li>
+<li>The route is built in app&#47;routes&#47;fbfeeds.js<&#47;li><br />
+<&#47;ol><br />
+<&#47;li></p>
+<li>Created a UI that allows a logged-in user to see existing posts, and create new posts<&#47;li>
+<li>Created a chart using d3.js to visualize our user data
+<ol>
+<li>The chart is rendered using an Angular directive (views&#47;reports&#47;ppu.html)<&#47;li>
+<li>D3 is loaded as a service and injected as a dependency (public&#47;services&#47;d3.js)<&#47;li>
+<li>The d3 visualization is built inside of the directive (public&#47;js&#47;directives.js)<&#47;li><br />
+<&#47;ol><br />
+<&#47;li><br />
+<&#47;ol><br />
+Also, the data for the visualization came from a Mongo Aggregation query. It's possible that we could have gotten the same results using a group by operator in Mongo, but doing this route allowed us to explore implementing the aggregation framework inside of the MEAN Stack. One other reason to choose this route (possibly more important) is the mongodb groupby operator will not function correctly in a sharded environment. Therefore, while it would have worked in this demonstration, it will not scale with you as you grow.</p>
+<p>Thanks again for attending. If you have any questions, comments, concerns -- please don't hesitate to contact me.</p>

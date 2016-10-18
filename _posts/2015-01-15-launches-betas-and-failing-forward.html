@@ -1,0 +1,24 @@
+---
+layout: post
+status: publish
+published: true
+title: Launches, betas, and failing forward
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 151
+wordpress_url: http://willbutton.co/?p=151
+date: '2015-01-15 21:25:38 -0700'
+date_gmt: '2015-01-16 04:25:38 -0700'
+---
+<p><img src="{{ site.baseurl }}/images/1421381244_thumb.jpeg" align="middle" class="aligncenter full" alt="" title="">I&rsquo;ve got a small project I&rsquo;m working on (<a href="http:&#47;&#47;www.paleotracking.com" title="" target="_blank">paleotracking.com<&#47;a>). It recently launched into a small beta. I launched on two Amazon AWS t1.micros for a couple of reasons:<&#47;p>
+<ul>
+<li>cost - at roughly $15&#47;month, this is the price point that makes it easy to test earlier and fail faster<br><&#47;li>
+<li>size - with only 600mb of RAM, efficiency counts and when coupled with a small beta group, issues that would stay hidden until under heavy load can be quickly identified and resolved while still manageable<&#47;li><&#47;ul>
+<p><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;01&#47;1421381285_full.png" target="_blank"><img src="{{ site.baseurl }}/images/1421381285_thumb.png" align="middle" class="aligncenter full" alt="" title=""><&#47;a>The second issue quickly proved its value as the website was performing horribly. Each page load was taking over 10 seconds to load, but interestingly enough- once the page loaded, all of the behavior on the page was quick and snappy. The beta was failing quickly and without rapid intervention, I was risking losing the beta group completely. I&rsquo;ve used&nbsp;<a href="http:&#47;&#47;www.newrelic.com" title="" target="_blank">NewRelic<&#47;a>&nbsp;for years and am a big fan. Installation and configuration couldn&rsquo;t be easier and you start seeing metrics in minutes. Since my app is running on&nbsp;<a href="http:&#47;&#47;nodejs.org&#47;" title="" target="_blank">node.js<&#47;a>, installation for me meant typing&nbsp;<&#47;p><br />
+<blockquote>npm install newrelic<&#47;blockquote>
+<p class="wrapped"><a href="http:&#47;&#47;willbutton.co&#47;wp-content&#47;uploads&#47;2015&#47;01&#47;1421382326_full.png" target="_blank"><img src="{{ site.baseurl }}/images/1421382326_thumb.png" align="left" class="alignleft" alt="" title=""><&#47;a>copy newrelic.js to the root, and add my keys. Right away I could see web transactions were completing in ~1 second, but page loads were taking in excess of 10 seconds. This let me see that while my webserver was responding, something else was not. I then turned to my next tool in my tool belt:&nbsp;<a href="https:&#47;&#47;developer.chrome.com&#47;devtools" title="" target="_blank">Google Chrome Developer Tools<&#47;a>. Using the Network view, I was able to see every object that was downloading to the browser along with the time it was taking to download. This is where I found the culprit: a missing js file was timing out, causing the page load to stall in the process. Once corrected, page loads were as quick and snappy as they were in my development environment and the beta was saved!<br><br>Granted, this was all-in-all a relatively quick and minor fix but it serves to highlight the importance of knowing your monitoring toolset. For a modern day developer, utilizing free or low cost tools like New Relic and Google Chrome Developer Tools is a must and can save you countless hours in development, troubleshooting and recovery time. If you don&rsquo;t currently have similar tool suites at the ready for your current project, take the time to implement and learn them now. The time spent upfront will pay for itself tenfold in the face of crisis.<&#47;p><br></p>

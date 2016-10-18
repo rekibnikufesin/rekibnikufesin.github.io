@@ -1,0 +1,109 @@
+---
+layout: post
+status: publish
+published: true
+title: Monitoring Web Services with Zabbix
+author:
+  display_name: rekibnikufesin
+  login: rekibnikufesin
+  email: rekibnikufesin@gmail.com
+  url: ''
+author_login: rekibnikufesin
+author_email: rekibnikufesin@gmail.com
+wordpress_id: 17
+wordpress_url: http://two4seven.me/?p=17
+date: '2013-10-22 02:43:39 -0700'
+date_gmt: '2013-10-22 02:43:39 -0700'
+---
+<p>We use Zabbix as our primary tool for monitoring servers at MyList and wanted to monitor our system health web services with <a href="http:&#47;&#47;www.zabbix.com&#47;" target="_blank">Zabbix<&#47;a>. &nbsp;These system web services report on our overall system health, and are useful in identifying middle-ware issues. &nbsp;These are exposed via web services and return json objects like this:</p>
+<p><code>{"status":{"code":"SUCCESS","message":"Success"},<br />
+"details":<br />
+{"jobs":<br />
+[<br />
+{"id":"JobID0","lastProcessDate":{"date":"2013-10-09T19:31:18.640+0000"},<br />
+"unprocessed":2,"health":"OK","description":"Tracks addition of new items to the database."},<br />
+{"id":"JobID1","lastProcessDate":{"date":"2013-10-09T19:31:18.600+0000"},<br />
+"unprocessed":8,"health":"OK","description":"Purges expired items from published catalog."},<br />
+{"id":"JobID2","lastProcessDate":{"date":"2013-10-09T19:31:18.602+0000"},<br />
+"unprocessed":0,"health":"OK","description":"This is another fake task that needs a witty description"}<br />
+]<br />
+}<br />
+}<&#47;code></p>
+<p>Zabbix doesn't have the ability to read JSON objects (as far as I can tell), so we had to create our own.</p>
+<p>The first consideration was where to monitor this from? &nbsp;It seemed logical to use the servers that provide the web services themselves, but that had some implementation details I didn't like:<br />
+These servers are behind a load balancer, and will soon be setup to auto-scale up and down. &nbsp;This meant I couldn't rely on any one server to always be there.<br />
+I didn't want to add the monitoring to all of the servers behind the load balancer, that would create unnecessary hits against the web services.<br />
+To solve the problem, I decided to spin up a new AWS micro instance whose sole responsibility was to monitor web services across the environment. &nbsp;I won't cover the details of building the instance in this article, but if you need additional resources to do so, check <a title="here" href="http:&#47;&#47;aws.amazon.com&#47;" target="_blank">here<&#47;a> or feel free to <a title="About" href="http:&#47;&#47;two4seven.me&#47;about&#47;">contact me<&#47;a>.</p>
+<p>The next step was to capture the web service data and break it apart so that it could be consumed by Zabbix. &nbsp;As mentioned earlier, Zabbix doesn't appear to have the ability to monitor and report on JSON objects but it does have the ability to run commands and read the results. &nbsp;Using Python, a script was created that pulled in the JSON object from the web service. &nbsp;It looks like this:</p>
+<p><img class="aligncenter size-full wp-image-24" alt="jobStatus code" src="{{ site.baseurl }}/images/jobStatus.png" width="960" height="384" &#47;>The first three lines import the modules we need for the script. &nbsp;If you don't have these installed, you can install them using easy_install.<br />
+Next we fetch the JSON response from the web service using urllib2:</p>
+<p><code>req = urllib2.Request("http:&#47;&#47;url.to.web.service&#47;jobStatus", None, {'user-agent': 'MyList Monitor Script'})<br />
+opener = urllib2.build_opener()<br />
+f = opener.open(req)<&#47;code></p>
+<p>Finally, we parse the JSON object to extract the values we want to expose. &nbsp;The JSON object returned by the web service contains two members: "status" and "details". &nbsp;The details member contains a member "jobs" which holds an array of the individual jobs being reported on.<br />
+By using the Python json module, you can see that we can access the JSON object members by name. &nbsp;For example<br />
+<code>details = obj['details']<&#47;code><br />
+creates an object named details that contains the member "details" from our web service JSON response. &nbsp;Going one step further,<br />
+<code>jobs = details['jobs']<&#47;code><br />
+creates a new object "jobs" that contains the array of elements from the details json.</p>
+<p>The next lines of code will take arguments passed in via the command line to use as a filter for jobs by name. This allows us to create individual alerts in Zabbix on a per job basis. &nbsp;If you save the script above to your file system as "jobStatus.py", entering the following command at a command prompt:<br />
+<code>python jobStatus.py JobID1<&#47;code><br />
+will run the python script and output this:<br />
+<code>SUCCESS ^ Success ^ JobID1 ^&nbsp;Purges expired items from published catalog. ^ 8 ^ &nbsp;^ OK&nbsp;2013-10-09T19:31:18.600+0000<&#47;code></p>
+<p>Let's review what we've got so far:<br />
+We created a python script that calls a job status from a web service. &nbsp;The web service returns the job status details in the form of a JSON object. &nbsp;Using our python script, we can pass in the name of a particular job and the script will return the details of that job to the command prompt. &nbsp;That's enough for us to build some monitoring in Zabbix, so let's get to that next.</p>
+<p>To implement this in Zabbix, we're going to create a new item in Zabbix for each element of the job status. &nbsp;This allows the job status data to be monitored, tracked for historical reporting, and alert on defined conditions. &nbsp;Take a look at the following screen:<img class="aligncenter size-full wp-image-23" alt="zabbix item screen" src="{{ site.baseurl }}/images/item_screen.png" width="848" height="443" &#47;></p>
+<p>Specifically, look at the "Key" field: JobID1.health<br />
+Remember, we can use our monitor script to get the details on a specific job (JobID1, in this case) and that job has a health element.<br />
+To set that up, we will use UserParameters in the Zabbix agent.<br />
+A UserParameter in Zabbix is a way to create your own custom monitor by having Zabbix run a command on the desired agent. &nbsp;UserParameter entries are added to the zabbix_agentd.conf file. &nbsp;The entries must be present on <b>every<&#47;b>&nbsp;system that you want to monitor. &nbsp;Since we're using a single host to collect all of our monitoring data, this isn't a problem for our purposes.<br />
+Edit &#47;etc&#47;zabbix&#47;zabbix-agentd.conf and add the following:<br />
+<code>UserParameter=JobID1.health, python &#47;opt&#47;zabbix&#47;jobStatus.py JobID1 | cut -f7 -d"^"<&#47;code></p>
+<p>Let's look at that in pieces so we fully understand what we're doing:<br />
+UserParameter=JobID1.health &nbsp;<== this defines a UserParameter with the name JobID1.health. &nbsp;When we later set up the monitor in Zabbix for this data point, Zabbix will search all of the things it knows how to monitor for "JobID1.health". &nbsp;After it searches its built-in monitors, it will look in the conf file where it will find this entry defining the JobID1.health.<br />
+python &#47;opt&#47;zabbix&#47;jobStatus.py JobID1 <== this should seem familiar, it's our python script we created earlier. &nbsp;Just be sure to change the path to the script file to match your local file system <b>and<&#47;b>&nbsp;make sure the file is owned by the zabbix process.<br />
+The next section pipes the output of our python script to the cut command: "| cut -f7 -d"^""<br />
+This takes an input (in our case, the output of the python script), breaks it apart using the caret(^) as the marker, and returns the 7th element (-f7). &nbsp;For this particular instance, the 7th element is the health status. &nbsp;Other fields are as follows:<br />
+-f5 - number of unprocessed entries<br />
+-f6 - date last item processed<br />
+-f4 - description of the job</p>
+<p>So now you can see that if we add the following to our zabbix-agentd.conf:<br />
+<code>UserParameter=JobID1.health, python &#47;opt&#47;zabbix&#47;jobStatus.py JobID1 | cut -f7 -d"^"<br />
+UserParameter=JobID1.unprocessed, python &#47;opt&#47;zabbix&#47;jobStatus.py JobID1 | cut -f5 -d"^"<br />
+UserParameter=JobID1.lastprocessed, python &#47;opt&#47;zabbix&#47;jobStatus.py JobID1 | cut -f6 -d"^"<br />
+UserParameter=JobID1.description, python &#47;opt&#47;zabbix&#47;jobStatus.py JobID1 | cut -f4 -d"^"<&#47;code><br />
+we've created 4 custom monitor points: JobID1.health, JobID1.unprocessed, JobID1.lastprocessed, and JobID1.description. &nbsp;That's badass.</p>
+<p>BTW: be sure you restart your zabbix agent after making changes to the zabbix-agentd.conf file, otherwise the agent is unaware of your changes.</p>
+<p>That may have felt like a bit of a detour, and it was: we started out setting up a new monitor in Zabbix, and quickly moved into editing the agent conf file. &nbsp;This was necessary because we had to "create" the key that was going to be monitored by Zabbix, and that is done in the agent conf file.<br />
+So&hellip; back to creating the monitor: &nbsp;In Zabbix, choose Configuration --> Hosts, the select Items for the host that you configured above.<br />
+You'll add a new Item for every entry that you added into the config file, so let's just start with the first one: JobID1.health.<br />
+In the description field, enter something meaningful. &nbsp;It's always a good idea when creating descriptions that you aren't creating them for yourself, you're creating them for someone else who may not be familiar with the environment and will be relying solely on your documentation. &nbsp;This fact alone can significantly impact the number of calls you get at 2am when things break and no one but you can figure out why. &nbsp;(Bonus tip: This is <b>not<&#47;b>&nbsp;the type of job security you are looking for.)<br />
+For the "type" field, choose Zabbix agent.<br />
+Under "key", enter in the name you specified as the UserParameter in the config file. &nbsp;In our example, it's JobID1.health<br />
+"Type of Information" is asking for the type of data Zabbix should expect from the monitored item. &nbsp;In the example, I've chosen "character", which is text limited to 255 bytes. &nbsp;This will work fine for this example since the health status will only be expected to return "OK", "WARNING", or "CRITICAL". &nbsp;Other options available are "text"- which is unlimited in length, "numeric"- both unsigned and float, and "log" for log files. &nbsp;For monitors that return numeric results, you definitely want to choose one of the numeric types as this will enable Zabbix to build graphs and trending.<br />
+Choose an appropriate value for the "update interval", one that is frequent enough to proactively resolve issues, but not so frequent that the monitoring itself is the most significant activity on the service. &nbsp;Use a similar strategy for the history: you want enough to identify trends over time, but not so much that you are creating additional work maintaining data that does not get used. &nbsp;I call this data hoarding, and yes: sometimes someone needs an intervention.<br />
+The last section to fill out is the application section, and is honestly my favorite. &nbsp;This will group a collection of Zabbix monitors together by application, allowing you to visualize the performance of one application as a group. &nbsp;In the example being used here, all the data being collected is related to our Content Application, so I make sure to choose that from the selection window. &nbsp;If creating a new application, it obviously won't be in the pre-populated selector window, so I type it into the "New Application" text box above. &nbsp;Here is a screenshot of a monitored agent with multiple applications, shown to illustrate how nice of a feature this is:<br />
+Collapsed:<br />
+<img class="alignleft size-full wp-image-21" alt="collapsed" src="{{ site.baseurl }}/images/collapsed.png" width="480" height="100" &#47;></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Expanded:</p>
+<p><img class="aligncenter size-full wp-image-22" alt="expanded" src="{{ site.baseurl }}/images/expanded.png" width="1248" height="781" &#47;></p>
+<p>Finally, click Save and your new monitor is complete and will begin capturing data within a few minutes. &nbsp;Repeat this process for each entry&#47;monitored item as defined in the zabbix agent config file (zabbix-agentd.conf).</p>
+<p>Now that the monitors are defined, configured and being monitored, there is one last step required to complete this project: alerting. &nbsp;After all, a monitor is no good to anyone if it can't tell someone when things are wrong. &nbsp;In the example being discussed here, our monitoring is really straightforward. &nbsp;The job status service itself returns the health status in the JSON, so all we need to do is alert when the job status health does not return "OK"<br />
+Under Configuration --> Hosts, select "Triggers" under the host that we have been modifying<br />
+<img class="alignleft size-full wp-image-20" alt="create trigger" src="{{ site.baseurl }}/images/trigger.png" width="660" height="45" &#47;></p>
+<p>&nbsp;</p>
+<p>Choose "Create Trigger".<br />
+Enter the following:<br />
+Name- a descriptive name for the alert, again following the rules of descriptions I noted earlier.<br />
+Expression- the expression is entered like this:<br />
+<code>((monitor.mydomain.com:Content.JobID1.health.iregexp(ok)})#1)<&#47;code><br />
+Let's take a look at that a little closer:<br />
+monitor.mydomain.com is the name of the monitored system. &nbsp;It's the same one we've been working on all along, so you'll just need to replace this with whatever name Zabbix uses to refer to your instance or server. &nbsp;The next section is the monitor itself, and in this example- it is the health key of the JobID1 monitor in the Content application (see how we walked up the name backwards?). &nbsp;The final piece "iregexp(ok)}#1) tells Zabbix to use a case-insensitive regex expression (iregexp) to match against anything <b>except<&#47;b>&nbsp;the string "ok". So technically, the regex expression matches against the string "ok", and the #1 tells Zabbix to trigger when the regex does <b>not<&#47;b>&nbsp;match.<br />
+Next we can setup dependencies. &nbsp;Dependencies in Zabbix tell the alert not to fire if certain conditions exist. &nbsp;For example, if the host is already down, we can assume that the data will not be available for monitoring the web service. &nbsp;In that instance, we would want to suppress the web service triggers as they would only add to the noise of the other alerts, potentially masking the real problem. &nbsp;To address that, we could add a dependency for this alert on the host ping status- meaning that if we are already receiving an alert that we can't ping this host, the Health alert trigger will be suppressed.<br />
+Finally set the Severity- this will determine what action to take when this alert fires based on your actions defined under Configuration --> Actions.<br />
+Fill out comments, URL as desired. &nbsp;Ensure "Disabled" is not checked and save the trigger.</p>
+<p><img class="aligncenter size-full wp-image-19" alt="add trigger" src="{{ site.baseurl }}/images/trigger2.png" width="860" height="376" &#47;><br />
+And that should do it. &nbsp;From beginning to end, we have identified a load balanced web service. &nbsp;Retrieved a JSON object with the status details from that web service, brought those details into Zabbix for monitoring and reporting and finally setup an alert to trigger when the status is not OK. &nbsp;I hope this has been useful and will enable you to further extend your Zabbix monitoring into your enterprise.</p>
